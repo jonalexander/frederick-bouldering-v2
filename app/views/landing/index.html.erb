@@ -1,0 +1,20 @@
+  <div><strong>Browse By Area: </strong></div>
+
+  <div>
+      <% @main_areas.each do |area| %>
+        <%= link_to area.name, main_area_path(area) %> <br>
+      <% end %>
+  </div>
+
+<br><br>
+  <div><strong> Recently Add Problems </strong></div>
+
+  <div>
+      <% @recent_problems.each do |bproblem| %>
+        <% @bproblem_extended = "#{bproblem.name} #{bproblem.grade}" %>
+        <%= link_to @bproblem_extended, bproblem_path(bproblem) %> <br>
+      <% end %>
+  </div>
+
+
+  <%= image_tag("landing.jpg", class: "landing-img", alt: "Frederick Bouldering") %>

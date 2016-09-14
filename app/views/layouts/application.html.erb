@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Frederick Bouldering - Maryland Climbing</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <!-- nav -->
+
+    <div class="wrapper">
+
+        <header>
+          <h2> Frederick Bouldering </h2>
+          <div class="notice"> <%= notice %> </div>
+          <div class="alert"> <%= alert %> </div>
+        </header>
+
+        <%= yield %>
+
+        <footer>
+          footer
+        </footer>
+    <div>
+
+
+  </body>
+</html>
