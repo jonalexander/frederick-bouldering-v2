@@ -349,7 +349,7 @@ table a:visited {
   display: block;
 }
 
-.intro-content button {
+.intro-content-button {
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
   background-color: #ee6;
@@ -364,7 +364,7 @@ table a:visited {
   width: 10em;
 }
 
-.intro-content button:hover {
+.intro-content-button:hover {
   background-color: #000;
   color: #ee6;
   font-weight: 300;
