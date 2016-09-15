@@ -41,17 +41,17 @@
             <!-- produce div for each main_area -->
             <% @main_areas.each do |main_area| %>
                 <div class="item">
-                  <h3><%= main_area.name %></h3>
+                  <h3> <%= link_to main_area.name, main_area_path(main_area) %> </h3>
                   <div class="main-area-descrip">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in ipsum vitae urna vulputate sollicitudin. Nullam feugiat venenatis neque non egestas. Nunc porttitor in nulla sit amet tristique. Nulla luctus tortor erat, at porta ipsum pellentesque vel. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultricies ac eros. In laoreet accumsan consequat..</div>
 
                   <div class="main-area-descrip-detail-block">
-                    Sub-areas: <%= main_area.sub_areas.count %> <!-- dynamic -->
+                    Sub-areas: <%= link_to main_area.sub_areas.count, main_area_path(main_area) %> <!-- dynamic -->
                   </div>
                   <div class="main-area-descrip-detail-block">
-                    Total Problems: 17 <!-- dynamic -->
+                    Total Problems: <%= link_to main_area.bproblems.count, main_area_path(main_area) %> <!-- dynamic -->
                   </div>
                   <div class="main-area-descrip-detail-block">
-                    Access: Good <!-- dynamic -->
+                    Access: <%= link_to main_area.access, main_area_path(main_area) %>
                   </div>
                 </div>
             <% end %>
@@ -59,12 +59,19 @@
           </td>
           <!-- right column / extra info -->
           <td class="main-area-right-col">
-            <h3> Right Column </h3>
+            <div class="col-block">
+              <h3> Access </h3>
+              <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in ipsum vitae urna vulputate sollicitudin. Nullam feugiat venenatis neque non egestas. Nunc porttitor in nulla sit amet tristique. Nulla luctus tortor erat, at porta ipsum pellentesque vel. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultricies ac eros. In laoreet accumsan consequat..</p>
+            </div>
+            <div class="col-block">
+              <h3> Contributing </h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in ipsum vitae urna vulputate sollicitudin. Nullam feugiat venenatis neque non egestas. Nunc porttitor in nulla sit amet tristique. Nulla luctus tortor erat, at porta ipsum pellentesque vel. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultricies ac eros. In laoreet accumsan consequat..</p>
+            </div>
           </td>
 
         <tr>
 
-      <tr><td>bottom row</td></tr>
+      <tr><td></td></tr>
     </tbody>
   </table>
 </div>

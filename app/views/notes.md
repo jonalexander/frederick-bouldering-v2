@@ -51,3 +51,5 @@ need number of subareas when listing a main-area-
 
 3. need total number of problems
   - change relationship? main_area has many problems through sub_areas
+
+4. validations

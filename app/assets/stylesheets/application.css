@@ -82,6 +82,10 @@ table h3 {
   line-height: 1em;
 }
 
+.col-block h3 {
+  padding-left: 0.5em;
+}
+
 table h4 {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 600;
@@ -224,13 +228,28 @@ td.main-area-left-col {
 
 td.main-area-right-col {
   padding-top: 1em;
-  padding-left: 2em;
   vertical-align: top;
-  background-color: #ee6;
   width: 40%
 }
 
 td.main-area-right-col-head {
+}
+
+table a {
+  text-decoration: none;
+  color: #000;
+}
+
+table a:hover {
+  background-color: #fff;
+  color: #000;
+  text-decoration: underline;
+}
+
+table a:visited {
+  background-color: #fff;
+  color: #000;
+  text-decoration: underline;
 }
 
 .main-area .item {
@@ -242,6 +261,7 @@ td.main-area-right-col-head {
 .main-area-descrip {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   padding-bottom: 1em;
+
   font-size: 1em;
   line-height: 1.4em;
 }
@@ -256,6 +276,16 @@ td.main-area-right-col-head {
   padding-right: 2em;
   text-transform: uppercase;
 
+}
+
+.main-area-right-col p {
+  padding: 0 1em 1em 1em;
+  margin: 0 0 0 0;
+}
+
+.main-area-right-col .col-block {
+  background-color: #ee6;
+  margin-bottom: 2em;
 }
 
 .intro-content {
