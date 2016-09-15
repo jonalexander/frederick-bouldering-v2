@@ -37,3 +37,17 @@ sub_area
 
 main_area
 - has many subareas
+
+
+1. update main_area
+  - needs description
+  - maybe description snippet
+  - needs thumbnail
+  - access
+
+2. X COMPLETE
+need number of subareas when listing a main-area-
+  - call main_area.sub_areas.count in the view
+
+3. need total number of problems
+  - change relationship? main_area has many problems through sub_areas

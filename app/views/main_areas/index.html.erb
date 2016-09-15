@@ -1,0 +1,70 @@
+<!-- admin ads main-areas -->
+
+<!--
+  required info
+    - name
+    - populate all main-areas
+    - display map of where everything is?
+    - number of problems via sub-areas
+
+    -radio towers
+    -buschwhack
+    -watershed
+      -bushwhack
+      -the acre
+    -middlepoint
+    -cunningham falls
+    -catoctin
+      -dixie
+      -hogrock
+      -lost world
+-->
+
+<div class="wrapper">
+
+  <table class="main-area">
+    <tbody>
+
+      <tr>
+        <td class="main-area-left-col-head">
+          <!-- table h1 css -->
+          <h1>Bouldering Areas</h1>
+        </td>
+        <td class="main-area-right-col-head"><h4>Frederick Bouldering</h4></td>
+
+      </tr>
+
+        <tr>
+          <!-- left column / list main areas-->
+          <td class="main-area-left-col">
+
+            <!-- produce div for each main_area -->
+            <% @main_areas.each do |main_area| %>
+                <div class="item">
+                  <h3><%= main_area.name %></h3>
+                  <div class="main-area-descrip">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in ipsum vitae urna vulputate sollicitudin. Nullam feugiat venenatis neque non egestas. Nunc porttitor in nulla sit amet tristique. Nulla luctus tortor erat, at porta ipsum pellentesque vel. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultricies ac eros. In laoreet accumsan consequat..</div>
+
+                  <div class="main-area-descrip-detail-block">
+                    Sub-areas: <%= main_area.sub_areas.count %> <!-- dynamic -->
+                  </div>
+                  <div class="main-area-descrip-detail-block">
+                    Total Problems: 17 <!-- dynamic -->
+                  </div>
+                  <div class="main-area-descrip-detail-block">
+                    Access: Good <!-- dynamic -->
+                  </div>
+                </div>
+            <% end %>
+
+          </td>
+          <!-- right column / extra info -->
+          <td class="main-area-right-col">
+            <h3> Right Column </h3>
+          </td>
+
+        <tr>
+
+      <tr><td>bottom row</td></tr>
+    </tbody>
+  </table>
+</div>

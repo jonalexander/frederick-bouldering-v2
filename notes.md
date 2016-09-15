@@ -11,10 +11,10 @@ create controllers
 
 
 LANDING --
-  - list of main areas
-  - news
-  - login
-  - sign up
+  * login or sign up -- takes you to another page then brings you back to index
+
+  - list of all main areas
+  - list of latest problems (link to view all --> list of all problems sorted by area)
 
 
 go to main areas

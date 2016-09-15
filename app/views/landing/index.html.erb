@@ -1,20 +1,29 @@
-  <div><strong>Browse By Area: </strong></div>
+<!-- notifications -->
+<div class="notice"> <%= notice %> </div>
+<div class="alert"> <%= alert %> </div>
+<!-- content wrapper -->
+<div class="wrapper">
 
-  <div>
-      <% @main_areas.each do |area| %>
-        <%= link_to area.name, main_area_path(area) %> <br>
-      <% end %>
-  </div>
+    <div class="intro-content">
+      <div id="intro-left">
+        <div id="intro-header">
+          <h1> Frederick Bouldering </h1>
+          <h2> Watershed, Catoctin<br>&amp; more. </h2>              <br>
+          <button> Browse By Area </button>
+          <br><br>
+          <h3> Recently Added Problems </h3>
 
-<br><br>
-  <div><strong> Recently Add Problems </strong></div>
+          <ul>
+            <% @recent_problems.each do |problem| %>
+              <% @problem_extended = "#{problem.name} #{problem.grade}" %>
+              <li> <%= link_to @problem_extended, bproblem_path(problem) %> </li>
+            <% end %>
+         </ul>
 
-  <div>
-      <% @recent_problems.each do |bproblem| %>
-        <% @bproblem_extended = "#{bproblem.name} #{bproblem.grade}" %>
-        <%= link_to @bproblem_extended, bproblem_path(bproblem) %> <br>
-      <% end %>
-  </div>
-
-
-  <%= image_tag("landing.jpg", class: "landing-img", alt: "Frederick Bouldering") %>
+        </div>
+      </div>
+      <div id="intro-right">
+        <%= image_tag("landing.jpg", class: "landing-img") %>
+      </div>
+    </div> <!-- introcontent -->
+</div> <!--wrapper-->
