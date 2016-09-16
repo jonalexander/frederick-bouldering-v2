@@ -1,0 +1,105 @@
+<div class="wrapper">
+
+  <table id="bproblem-show">
+    <tbody>
+
+      <tr>  <!-- header row -->
+        <td class="left-col-head" colspan="2">
+          <h1> <%= "#{@bproblem.name} #{@bproblem.grade}" %> </h1>
+
+          <!-- breadcrumbs -->
+          <div class="detail-row">
+            <div class="main-area-descrip-detail-block">
+              <%= link_to @main_area.name, main_area_path(@main_area) %>
+            </div>
+            <div class="main-area-descrip-detail-block">
+              <%= link_to @sub_area.name, sub_area_path(@sub_area) %>
+            </div>
+          </div>
+
+
+        </td>
+
+        <td class="right-col-head">
+          <h4> Frederick Bouldering </h4>
+        </td>
+
+      </tr> <!-- header row -->
+
+
+      <tr>  <!-- main content -->
+
+        <td class="left-col" colspan="2">  <!-- left column / list main areas-->
+
+
+
+          <div class="item">
+            <div class="problems-header">
+
+              <div id="left"><h3> Beta </h3></div>
+
+              <div id="right">
+                <%= link_to "+ Add Problem", new_bproblem_path(:sub_area_id => @sub_area.id) %>
+               </div>
+            </div>
+
+            <div class="main-area-descrip">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in ipsum vitae urna vulputate sollicitudin. Nullam feugiat venenatis neque non egestas. Nunc porttitor in nulla sit amet tristique. Nulla luctus tortor erat, at porta ipsum pellentesque vel. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultricies ac eros. In laoreet accumsan consequat..</div>
+            <div class="first-ascent">
+
+              <% if @bproblem.first_ascent %>
+                FA: <%= link_to @bproblem.first_ascent.name, first_ascent_path(@bproblem.first_ascent) %> </div>
+              <% else %>
+                FA: <%= link_to "Unknown", edit_bproblem_path(@bproblem) %>
+              <% end %>
+
+            </div>
+          </div>
+
+          <div class="item" id="photos">
+            <h3> Photos </h3>
+
+            <!-- display list of all problems in sub_area -->
+            <% 4.times do %>
+            <div class="bproblem-photo">HELP</div>
+            <% end %>
+          </div>
+
+        </td> <!-- left col -->
+
+        <td class="right-col"> <!-- right col -->
+
+          <div class="col-block">
+            <h3> Problems Close By </h3>
+            <hr>
+
+            <ul>
+              <% @sub_area_problems.each do |bproblem| %>
+                <li> <%= link_to "#{bproblem.name} #{bproblem.grade}", bproblem_path(bproblem)%> </li>
+              <% end %>
+            </ul>
+
+          </div>
+
+          <div class="col-block">
+            <h3> More <%= "#{@bproblem.grade}'s" %> </h3>
+            <hr><hr>
+
+            <ul>
+              <% @bproblems_same_grade.each do |bproblem| %>
+                <li> <%= link_to bproblem.name, bproblem_path(bproblem)%> </li>
+              <% end %>
+          </ul>
+
+          </div>
+
+
+
+        </td> <!-- right col- -->
+
+      </tr> <!-- main content -->
+
+      <tr><td></td></tr>
+    </tbody>
+  </table>
+
+</div> <!-- wrapper -->

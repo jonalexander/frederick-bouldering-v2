@@ -39,14 +39,29 @@ main_area
 - has many subareas
 
 
-TO-DO =====
+TO-DO ============
 
-Layout for Main Area
+* get top contributors for a main_area
+ - go down through each boulder problem
+ - to each FA of each problem and sort by most
 
-description
-history?
-getting there
-photos
-sub_areas
-classic problems
-more resources
+* ensure parent doesnt have duplicate children (active record)
+- has_many :invoices, :through => :enrollments, :uniq => true
+- DEPRACATED.
+
+* sub_area show page
+- location beta
+- place for topo image - on side, not a main component
+- list of all problems
+  + sort by grade / alphabetical
+
+* sub_area index page
+
+* bproblem show page
+- name / grade
+- breadcrumbs to sub_area / main_area
+- Location
+
+* refactor landing page to SCALE for mobile
+
+* main_area page -- add links to add sub_area

@@ -1,3 +1,5 @@
+require 'pry'
+
 class MainAreasController < ApplicationController
   def index
     @main_areas = MainArea.all.sort_by { |main_area| main_area.name.downcase }
@@ -19,6 +21,9 @@ class MainAreasController < ApplicationController
   def show
     @main_area = MainArea.find(params[:id])
     @main_areas = MainArea.all
+    # refactor into efficient ActiveRecord query
+    # bproblems = @main_area.bproblems
+    # @fas = bproblems.map { |problem| problem.first_ascent }
   end
 
   def update

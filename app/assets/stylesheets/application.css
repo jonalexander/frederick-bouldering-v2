@@ -84,6 +84,12 @@ table h3 {
 
 .col-block h3 {
   padding-left: 0.5em;
+  font-size: 1.4em;
+}
+
+.col-block-clear h3 {
+  padding-left: 0.5em;
+  font-size: 1.4em;
 }
 
 table h4 {
@@ -149,10 +155,10 @@ body {
 .navbar {
   display: table;
   margin-left: 10em;
-  width: 90%;
-  padding-left: 10%;
+  width: 100%;
   margin: 0;
   background-color: #000;
+  padding-left: 10%
   /*opacity: 0.5;*/
 }
 
@@ -169,7 +175,7 @@ body {
 .navbar li {
   display:table-cell;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  padding-right: 1em;
+  padding-right: 1.4em;
 }
 
 .navbar li a {
@@ -192,8 +198,9 @@ table {
 }
 
 td.left-col {
-  padding-top: 0.5em;
+
   width: 66%;
+  vertical-align: top;
 }
 
 td.right-col {
@@ -204,10 +211,11 @@ td.right-col {
 
 td.left-col-head {
   width: 66%;
+  vertical-align: top;
 }
 
 td.right-col-head {
-  padding-top: 1em;
+  padding-top: 0em;
   width: 33%
 }
 
@@ -244,7 +252,6 @@ table a:visited {
 .main-area-descrip {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   padding-bottom: 1em;
-
   font-size: 1em;
   line-height: 1.4em;
 }
@@ -260,8 +267,33 @@ table a:visited {
   padding-top: 0.2em;
   padding-bottom: 0.2em;
   margin-right: 1em;
+  margin-top: 0.8em;
   text-transform: capitalize;
   background-color: #eee;
+  opacity: 0.6;
+}
+
+.main-area-descrip-detail-block a {
+  opacity: 0.6;
+  background-color: #eee;
+
+}
+
+.main-area-descrip-detail-block a:hover {
+  opacity: 1.0;
+  text-decoration: none;
+  background-color: #eee;
+}
+
+.main-area-descrip-detail-block a:visited{
+  opacity: 0.6;
+  text-decoration: none;
+  background-color: #eee;
+}
+
+.detail-row {
+  padding-top: 1em;
+  width: 100%;
 }
 
 .sub-area-listing {
@@ -293,7 +325,7 @@ table a:visited {
 }
 
 .right-col p {
-  padding: 0 1em 1em 1em;
+  padding: 0.4em 1em 1em 1em;
   margin: 0 0 0 0;
 }
 
@@ -301,6 +333,19 @@ table a:visited {
   background-color: #ee6;
   margin-bottom: 2em;
 }
+
+.right-col .col-block-clear {
+  background-color: #eee;
+  margin-bottom: 2em;
+
+}
+
+/*
+.right-col .col-block-photos {
+  background-color: #ee6;
+  margin-bottom: 2em;
+  overflow: auto;
+}*/
 
 .intro-content {
   display: table-row;
@@ -385,47 +430,150 @@ table a:visited {
 }
 
 
+/* square images for sidebar */
 
-/* ---- old styling to save for later ----*/
 
-/*header #header-login-welcome {
-  display:table-cell;
-  text-align: right;
-  padding: 0 1em 0 0;
+.square {
+  padding-top: -1em;
+  padding-bottom: 2em;
+  margin-top: -1em;
+  margin-bottom: 2em;
+  background-color: #1a0000;
+  width: 100%;
+  height: 10em;
+}
+
+.bproblem-photo {
+  background-image: url(landing.jpg);
+  width: 20em;
+  height: 20em;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  margin: 1em;
+}
+
+
+.first-ascent {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  padding-bottom: 1em;
   font-size: 1.2em;
-  font-family: 'Volkhorn', serif;
-  font-weight: 400;
-}*/
-
-
-/*
-.navbar {
-  margin: 0;
-}
-
-.navbar ul {
-  list-style: none;
-  margin: 0;
-  display: table;
-  width: auto;
-  padding: 0.5em 1em 0.5em 1em;
-
-}
-
-.navbar li {
-  display:table-cell;
+  line-height: 1em;
+  text-align: left;
   padding-right: 1em;
-  font-family: 'Open Sans', sans-serif;
+  opacity: 0.8;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
 
-.navbar li a {
-  color: #85361C;
-  text-decoration: none;
+
+.col-block ul {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 1.2em;
+  list-style: none;
+  margin: 0 0 0 0;
+  padding-left: 1em;
+  padding-bottom: 1em;
+  padding-top: 0.2em;
+  display: table;
+  table-layout: fixed;
+  width: 100%;
 }
 
-.navbar li a:hover {
+.col-block li a {
+  display: table-row;
+  width: 100%;
+  background-color: #ee6;
+  padding-left: 1em;
+
+}
+
+.col-block li a:hover {
   text-decoration: underline;
-  background-color: #fff;
 }
 
-*/
+.col-block hr {
+  display: block;
+  background-color: #fff;
+  height: 0.05em;
+  border: 0;
+  margin: 0em 0;
+  padding: 0;
+}
+
+#edit a {
+}
+
+#sub-area-new {
+  background-color: #ee6;
+}
+
+.left-col input  {
+  width: 100%;
+  padding: 0.4em 0.4em 0.4em 0.4em;
+  color: #000;
+  border: 0;
+  display: block;
+  font-size: 1em;
+  margin-bottom: 0.5em
+}
+
+.left-col textarea  {
+  width: 100%;
+  padding: 0.4em 0.4em 0.4em 0.4em;
+  color: #000;
+  border: 0;
+  display: block;
+  font-size: 1em;
+  margin-bottom: 0.5em
+}
+
+.left-col select {
+  font-size: 1em;
+  border: 0;
+  display: block;
+  width: 100%;
+  padding: 0.4em 0.4em 0.4em 0.4em;
+  margin-bottom: 0.5em
+
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #000;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #000;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #000;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #000;
+}
+
+
+.problems-header{
+  height: auto;
+  display: table-row;
+}
+.problems-header #left {
+  width: 100em;
+  display: table-cell;
+}
+
+.problems-header #right {
+  width: 50%;
+  text-align: right;
+  font-size: 0.8em;
+  min-height: 100%;
+  display: table-cell;
+  vertical-align: center;
+  font-size: 1em;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.item #photos {
+  vertical-align: center;
+  text-align:center;
+}

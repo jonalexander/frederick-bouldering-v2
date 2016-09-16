@@ -6,6 +6,17 @@ class BproblemsController < ApplicationController
   end
 
   def show
+    @bproblem = Bproblem.find(params[:id])
+    @sub_area = @bproblem.sub_area
+    @main_area = @sub_area.main_area
+
+    # all boulder problems of same grade across all areas (without self)
+    @bproblems_same_grade = Bproblem.where(grade: @bproblem.grade).where.not(id: @bproblem.id)
+
+    # all other boulder problems in sub_area (without self)
+    @sub_area_problems = Bproblem.where(sub_area_id: @sub_area.id).where.not(id: @bproblem.id)
+
+
   end
 
   def new
@@ -17,7 +28,6 @@ class BproblemsController < ApplicationController
 
   def create
     @bproblem = Bproblem.new(bproblem_params)
-
     response_to do |format|
         if @bproblem.save
           format.html { redirect_to @bproblem, notice: 'Problem was created.'}

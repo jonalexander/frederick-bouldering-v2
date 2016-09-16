@@ -1,0 +1,79 @@
+<div class="wrapper">
+
+  <table id="sub-area-display">
+    <tbody>
+
+      <tr>  <!-- header row -->
+        <td class="left-col-head" colspan="2">
+          <h1> <%= @sub_area.name %> </h1>
+
+          <!-- breadcrumbs -->
+          <div class="main-area-descrip-detail-block">
+            <%= link_to @main_area.name, main_area_path(@main_area) %>
+          </div>
+        </td>
+
+        <td class="right-col-head">
+          <h4> Frederick Bouldering </h4>
+        </td>
+
+      </tr> <!-- header row -->
+
+
+      <tr>  <!-- main content -->
+
+        <td class="left-col" colspan="2">  <!-- left column / list main areas-->
+
+          <div class="item">
+            <h3> Description </h3>
+            <div class="main-area-descrip">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in ipsum vitae urna vulputate sollicitudin. Nullam feugiat venenatis neque non egestas. Nunc porttitor in nulla sit amet tristique. Nulla luctus tortor erat, at porta ipsum pellentesque vel. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultricies ac eros. In laoreet accumsan consequat..</div>
+          </div>
+
+          <div class="item">
+
+            <div class="problems-header">
+
+              <div id="left"><h3> Problems </h3></div>
+
+              <div id="right">
+                <%= link_to "+ Add Problem", new_bproblem_path(:sub_area_id => @sub_area.id) %>
+               </div>
+            </div>
+
+            <!-- display list of all problems in sub_area -->
+            <div class="sub-area-listing">
+              <% @sub_area.bproblems.each do |bproblem| %>
+                <% @bproblem_extended = "#{bproblem.name} #{bproblem.grade}" %>
+                <%= link_to @bproblem_extended, bproblem_path(bproblem) %>
+              <% end %>
+            </div>
+
+          </div>
+
+        </td> <!-- left col -->
+
+        <td class="right-col"> <!-- right col -->
+
+          <div class="col-block">
+            <h3> Topo </h3>
+            <hr>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in ipsum vitae urna vulputate sollicitudin. Nullam feugiat venenatis neque non egestas. Nunc porttitor in nulla sit amet tristique. Nulla luctus tortor erat, at porta ipsum pellentesque vel. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultricies ac eros. In laoreet accumsan consequat..</p>
+          </div>
+
+          <div class="col-block-clear">
+            <h3> Photos </h3>
+          </div>
+
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+
+        </td> <!-- right col- -->
+
+      </tr> <!-- main content -->
+
+      <tr><td></td></tr>
+    </tbody>
+  </table>
+
+</div> <!-- wrapper -->
