@@ -39,17 +39,14 @@ main_area
 - has many subareas
 
 
-1. update main_area
-  - needs description
-  - maybe description snippet
-  - needs thumbnail
-  - access
+TO-DO =====
 
-2. X COMPLETE
-need number of subareas when listing a main-area-
-  - call main_area.sub_areas.count in the view
+Layout for Main Area
 
-3. need total number of problems
-  - change relationship? main_area has many problems through sub_areas
-
-4. validations
+description
+history?
+getting there
+photos
+sub_areas
+classic problems
+more resources

@@ -1,22 +1,22 @@
 <div class="wrapper">
 
-  <table class="main-area">
+  <table id="main_areas">
     <tbody>
 
       <tr>
-        <td class="main-area-left-col-head">
+        <td class="left-col-head">
           <h1> Bouldering Areas </h1>
         </td>
 
-        <td class="main-area-right-col-head">
+        <td class="right-col-head">
           <h4> Frederick Bouldering </h4>
         </td>
 
       </tr>
 
-        <tr>
-          <!-- left column / list main areas-->
-          <td class="main-area-left-col">
+        <tr>  <!-- main content -->
+
+          <td class="left-col">  <!-- left column / list main areas-->
 
             <!-- produce div for each main_area -->
             <% @main_areas.each do |main_area| %>
@@ -25,20 +25,20 @@
                   <div class="main-area-descrip">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in ipsum vitae urna vulputate sollicitudin. Nullam feugiat venenatis neque non egestas. Nunc porttitor in nulla sit amet tristique. Nulla luctus tortor erat, at porta ipsum pellentesque vel. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultricies ac eros. In laoreet accumsan consequat..</div>
 
                   <div class="main-area-descrip-detail-block">
-                    Sub-areas: <%= link_to main_area.sub_areas.count, main_area_path(main_area) %> <!-- dynamic -->
+                    Sub-areas: <%= main_area.sub_areas.count %> <!-- dynamic -->
                   </div>
                   <div class="main-area-descrip-detail-block">
-                    Total Problems: <%= link_to main_area.bproblems.count, main_area_path(main_area) %> <!-- dynamic -->
+                    Total Problems: <%= main_area.bproblems.count %> <!-- dynamic -->
                   </div>
                   <div class="main-area-descrip-detail-block">
-                    Access: <%= link_to main_area.access, main_area_path(main_area) %>
+                    Access: <%= main_area.access %>
                   </div>
                 </div>
             <% end %>
 
           </td>
           <!-- right column / extra info -->
-          <td class="main-area-right-col">
+          <td class="right-col">
             <div class="col-block">
               <h3> Access </h3>
               <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in ipsum vitae urna vulputate sollicitudin. Nullam feugiat venenatis neque non egestas. Nunc porttitor in nulla sit amet tristique. Nulla luctus tortor erat, at porta ipsum pellentesque vel. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultricies ac eros. In laoreet accumsan consequat..</p>

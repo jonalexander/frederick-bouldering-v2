@@ -182,57 +182,40 @@ body {
   color: #ee6;
 }
 
-.content {
-  display: table-row;
-  padding-top: 3em;
-  margin: 0 auto;
-  align: center;
-  height: 10em;
-  width: 100%;
-  background-color: #eee;
-}
-
-.content h1 {
-
-}
-
-.cont-header {
-  display: table-cell;
-  background-color: #999;
-  width: 20%;
-}
-
 table {
   margin-left: auto;
   margin-right: auto;
   background-color: #fff;
   color: #000;
   padding-top: 1.6em;
-}
-
-table.main-area {
   width: 80%;
 }
 
-tr {
-}
-
-td {
-}
-
-
-td.main-area-left-col {
+td.left-col {
   padding-top: 0.5em;
-  width: 60%;
+  width: 66%;
 }
 
-td.main-area-right-col {
+td.right-col {
   padding-top: 1em;
   vertical-align: top;
-  width: 40%
+  width: 33%
 }
 
-td.main-area-right-col-head {
+td.left-col-head {
+  width: 66%;
+}
+
+td.right-col-head {
+  padding-top: 1em;
+  width: 33%
+}
+
+
+td.third-col {
+  width: 33%;
+  padding-top: 1em;
+  vertical-align: top;
 }
 
 table a {
@@ -252,7 +235,7 @@ table a:visited {
   text-decoration: underline;
 }
 
-.main-area .item {
+.item {
   background-color: #fff;
   padding: 0.3em;
   border-bottom: 1px;
@@ -270,20 +253,51 @@ table a:visited {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 1em;
   line-height: 1em;
-
   display:inline;
   width: 10em;
-  padding-right: 2em;
-  text-transform: uppercase;
-
+  padding-right: 1em;
+  padding-left: 1em;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin-right: 1em;
+  text-transform: capitalize;
+  background-color: #eee;
 }
 
-.main-area-right-col p {
+.sub-area-listing {
+  display: block;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 1.6em;
+  margin-bottom: 0.2em;
+}
+
+.sub-area-listing a {
+  display: block;
+  background-color: rgba(238, 238, 238, .6);
+  color: #000;
+  padding: 1em 1em 1em 1em;
+}
+
+.sub-area-listing a:hover {
+  display: block;
+  background-color: rgba(238, 238, 238, 1);
+  color: #000;
+  text-decoration: none;
+}
+
+.sub-area-listing a:visited {
+  display: block;
+  background-color: rgba(238, 238, 238, 1);
+  color: #000;
+  text-decoration: none;
+}
+
+.right-col p {
   padding: 0 1em 1em 1em;
   margin: 0 0 0 0;
 }
 
-.main-area-right-col .col-block {
+.right-col .col-block {
   background-color: #ee6;
   margin-bottom: 2em;
 }

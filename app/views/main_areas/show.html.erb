@@ -1,0 +1,75 @@
+<div class="wrapper">
+
+  <table id="main_area_display">
+    <tbody>
+
+      <tr>  <!-- header row -->
+        <td class="left-col-head" colspan="2">
+          <h1> <%= @main_area.name %> </h1>
+        </td>
+
+        <td class="right-col-head">
+          <h4> Frederick Bouldering </h4>
+        </td>
+
+      </tr> <!-- header row -->
+
+      <tr>  <!-- main content -->
+
+        <td class="left-col" colspan="2">  <!-- left column / list main areas-->
+
+          <div class="item">
+            <h3> Description </h3>
+            <div class="main-area-descrip">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in ipsum vitae urna vulputate sollicitudin. Nullam feugiat venenatis neque non egestas. Nunc porttitor in nulla sit amet tristique. Nulla luctus tortor erat, at porta ipsum pellentesque vel. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultricies ac eros. In laoreet accumsan consequat..</div>
+          </div>
+
+          <div class="item">
+            <h3> Getting There </h3>
+            <div class="main-area-descrip">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in ipsum vitae urna vulputate sollicitudin. Nullam feugiat venenatis neque non egestas. Nunc porttitor in nulla sit amet tristique. Nulla luctus tortor erat, at porta ipsum pellentesque vel. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultricies ac eros. In laoreet accumsan consequat..</div>
+          </div>
+
+        </td> <!-- left col -->
+
+        <td class="right-col"> <!-- right col -->
+
+          <div class="col-block">
+            <h3> More Resources </h3>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in ipsum vitae urna vulputate sollicitudin. Nullam feugiat venenatis neque non egestas. Nunc porttitor in nulla sit amet tristique. Nulla luctus tortor erat, at porta ipsum pellentesque vel. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultricies ac eros. In laoreet accumsan consequat..</p>
+          </div>
+
+        </td> <!-- right col- -->
+
+      </tr> <!-- main content -->
+
+      <tr> <!-- bottom content row -->
+        <td class="third-col">
+          <h3> Areas </h3>
+          <!-- generate list of sub-areas -->
+          <% @main_area.sub_areas.first(5).each do |sub_area| %>
+            <div class="sub-area-listing">
+                <%= link_to sub_area.name, sub_area_path(sub_area) %>
+            </div>
+          <% end %>
+        </td>
+
+        <td class="third-col">
+          <h3> Classics </h3>
+
+          <% @main_area.bproblems.each do |bproblem| %>
+            <% bproblem_extended = "#{bproblem.name} #{bproblem.grade}" %>
+            <div class="sub-area-listing">
+                <%= link_to bproblem_extended, bproblem_path(bproblem) %>
+            </div>
+          <% end %>
+        </td>
+
+        <td class="third-col">
+          <h3> Contributors </h3>
+        </td>
+      </tr>
+
+      <tr><td></td></tr>
+    </tbody>
+  </table>
+
+</div> <!-- wrapper -->

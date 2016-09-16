@@ -17,7 +17,8 @@ class MainAreasController < ApplicationController
   end
 
   def show
-
+    @main_area = MainArea.find(params[:id])
+    @main_areas = MainArea.all
   end
 
   def update
@@ -26,5 +27,11 @@ class MainAreasController < ApplicationController
 
   def destroy
 
+  end
+
+  private
+
+  def main_area_params
+    params.require(:main_area).permit(:name, :description, :access)
   end
 end
