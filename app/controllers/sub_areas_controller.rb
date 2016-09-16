@@ -13,9 +13,8 @@ class SubAreasController < ApplicationController
       @main_area.sub_areas << @sub_area
       redirect_to(@sub_area)
     else
-      render "edit"
+      render "new"
     end
-
   end
 
   def new

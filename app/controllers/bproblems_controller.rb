@@ -21,22 +21,33 @@ class BproblemsController < ApplicationController
 
   def new
     @bproblem = Bproblem.new
+
+    # for sub_area form dropdown
+    @sub_area_id = params["sub_area_id"]
   end
 
   def edit
   end
 
   def create
-    @bproblem = Bproblem.new(bproblem_params)
-    response_to do |format|
-        if @bproblem.save
-          format.html { redirect_to @bproblem, notice: 'Problem was created.'}
-          format.json { render :show, status: :created, location: @bproblem}
-        else
-          format.html { render :new }
-          format.json { render json: @bproblem.errors, status: :unprocessable_entity }
-        end
+    @bproblem = Bproblem.new(name: bproblem_params[:name], grade: bproblem_params[:grade], description: bproblem_params[:description])
+    @sub_area = SubArea.find(bproblem_params[:sub_area_id])
+
+    if @bproblem.save
+      @sub_area.bproblems << @bproblem
+      redirect_to(@problem)
+    else
+      render "new"
     end
+    # response_to do |format|
+    #     if @bproblem.save
+    #       format.html { redirect_to @bproblem, notice: 'Problem was created.'}
+    #       format.json { render :show, status: :created, location: @bproblem}
+    #     else
+    #       format.html { render :new }
+    #       format.json { render json: @bproblem.errors, status: :unprocessable_entity }
+    #     end
+    # end
   end
 
   def update
