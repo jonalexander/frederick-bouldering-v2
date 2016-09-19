@@ -62,6 +62,6 @@ TO-DO ============
 - breadcrumbs to sub_area / main_area
 - Location
 
-* refactor landing page to SCALE for mobile
+* refactor landing page to SCALE for mobile --- working on as of Monday
 
 * main_area page -- add links to add sub_area
