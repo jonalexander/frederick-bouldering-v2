@@ -57,11 +57,10 @@
 
           <div class="item" id="photos">
             <h3> Photos </h3>
-
+            <% @bproblem.photos.each do |photo| %>
+              <%= image_tag photo.thumb.url.to_s %>
+            <% end %>
             <!-- display list of all problems in sub_area -->
-            <div class="bproblem-photo">HELP</div>
-
-
           </div>
 
         </td> <!-- left col -->

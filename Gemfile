@@ -33,7 +33,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'devise'
 
 # Image uploads
-gem 'carrierwave', '>= 1.0.0.beta', '< 2.0'
+gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
 gem 'mini_magick', '~> 4.3'
 
 # Use Capistrano for deployment

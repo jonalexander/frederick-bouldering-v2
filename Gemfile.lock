@@ -1,3 +1,12 @@
+GIT
+  remote: git://github.com/carrierwaveuploader/carrierwave.git
+  revision: 5367a636053b85bd639f2d1ee6ab25ef8305aeaf
+  specs:
+    carrierwave (1.0.0.beta)
+      activemodel (>= 4.0.0)
+      activesupport (>= 4.0.0)
+      mime-types (>= 1.16)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -48,10 +57,6 @@ GEM
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
     byebug (9.0.5)
-    carrierwave (1.0.0.beta)
-      activemodel (>= 4.0.0)
-      activesupport (>= 4.0.0)
-      mime-types (>= 1.16)
     coderay (1.1.1)
     coffee-rails (4.2.1)
       coffee-script (>= 2.2.0)
@@ -188,7 +193,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   byebug
-  carrierwave (>= 1.0.0.beta, < 2.0)
+  carrierwave!
   coffee-rails (~> 4.2)
   devise
   jbuilder (~> 2.5)

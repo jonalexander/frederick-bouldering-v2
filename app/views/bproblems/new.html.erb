@@ -17,20 +17,17 @@
       <tr>  <!-- main content -->
         <td class="left-col" colspan="2">
 
-          <%= form_for @bproblem, :html => {:multipart => true} do |f| %>
+          <%= form_for @bproblem, html: { multipart: true } do |f| %>
 
             <%= f.text_field :name, placeholder: 'name' %>
             <%= f.select :grade, Bproblem::GRADES %>
             <%= f.text_area :description, placeholder: 'description' %>
             <%= f.collection_select(:sub_area_id, SubArea.all, :id, :name, {:selected => @sub_area_id} ) %>
 
-            <% #form needs to create new Image model and associate to @bproblem %>
-            <%= f.fields_for :image do |i| %>
-              Add Image
-              <%= i.file_field :source, name: "image[source]" %>
-            <% end %>
+            <% #photo uploads %>
+            <%= f.file_field :photos, multiple: true %>
 
-            <%= f.submit "Submit"%>
+          <%= f.submit "Submit"%>
 
           <% end %>
 

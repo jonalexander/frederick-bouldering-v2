@@ -19,6 +19,7 @@
 * X ADD accepts_nested_attributes_for :images ON Bproblem
 * MODIFY Bproblem Controller to handle new association
  --- @post_attachment = @post.post_attachments.create!(:avatar => a)
+ * ALLOW IMAGE PARAMS TO PASS THROUGH
 
 * remember--- 'source'  on image model is just a string on the table
 but it has a bunch of namespaced items to utilize..

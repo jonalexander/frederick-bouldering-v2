@@ -10,6 +10,8 @@ class BproblemsController < ApplicationController
 
   def show
     @bproblem = Bproblem.find(params[:id])
+
+    # refactor
     @sub_area = @bproblem.sub_area
     @main_area = @sub_area.main_area
 
@@ -18,38 +20,40 @@ class BproblemsController < ApplicationController
 
     # all other boulder problems in sub_area (without self)
     @sub_area_problems = Bproblem.where(sub_area_id: @sub_area.id).where.not(id: @bproblem.id)
-
-
   end
 
   def new
     @bproblem = Bproblem.new
-    @image = @bproblem.images.build
-
     # for sub_area form dropdown
     @sub_area_id = params["sub_area_id"]
   end
 
   def edit
+    @bproblem = Bproblem.find(params[:id])
   end
 
   def create
     binding.pry
-    @bproblem = Bproblem.new(name: bproblem_params[:name], grade: bproblem_params[:grade], description: bproblem_params[:description])
-    @sub_area = SubArea.find(bproblem_params[:sub_area_id])
-    @image = Image.new(source: image_params)
+    @bproblem = Bproblem.new(bproblem_params)
+    @bproblem.user_id = current_user.id
 
     binding.pry
+    @bproblem.save!
+
     if @bproblem.save
-      @sub_area.bproblems << @bproblem
-      @bproblem.images << @image
-      current_user.images << @image
-      redirect_to(@problem)
+      redirect_to @bproblem
     else
-      render "new"
+      render :new
     end
 
-    binding.pry
+    # @bproblem = Bproblem.new(name: bproblem_params[:name], grade: bproblem_params[:grade], description: bproblem_params[:description])
+    # @sub_area = SubArea.find(bproblem_params[:sub_area_id])
+    # @sub_area.bproblems << @bproblem
+    # @sub_area.save
+    # current_user.bproblems << @bproblem
+    # current_user.save
+    # binding.pry
+
     # response_to do |format|
     #     if @bproblem.save
     #       format.html { redirect_to @bproblem, notice: 'Problem was created.'}
@@ -90,11 +94,7 @@ class BproblemsController < ApplicationController
 
   def bproblem_params
     #params will change depending on how form is structured
-    params.require(:bproblem).permit(:name, :description, :grade, :sub_area_id, :first_ascent_id)
-  end
-
-  def image_params
-    params.require(:image)
+    params.require(:bproblem).permit(:name, :description, :grade, :sub_area_id, :first_ascent_id, photos: [])
   end
 
 end

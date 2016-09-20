@@ -1,7 +1,7 @@
 class Image < ApplicationRecord
-  mount_uploader :source, ImageUploader
-  # utilize ImageUploader to populate :source column on Images table
+  belongs_to :user
+  belongs_to :bproblem
 
-  belongs_to :user, optional: true
-  belongs_to :bproblem, optional: true
+  mount_uploader :image, ImageUploader
+  # ImageUploader to populate :image column on Images table
 end
