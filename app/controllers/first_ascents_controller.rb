@@ -1,4 +1,5 @@
 class FirstAscentsController < ApplicationController
+  before_action :authenticate_user!, :except => [:index, :show]
   # before_action :set_first_ascent, only: [:show, :edit, :update, :destroy]
   #
   # def index

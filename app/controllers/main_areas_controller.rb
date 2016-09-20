@@ -1,6 +1,8 @@
 require 'pry'
 
 class MainAreasController < ApplicationController
+  before_action :authenticate_user!, :except => [:index, :show]
+
   def index
     @main_areas = MainArea.all.sort_by { |main_area| main_area.name.downcase }
     # need to round up the details for each main area

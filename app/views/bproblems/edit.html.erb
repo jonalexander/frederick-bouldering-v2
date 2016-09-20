@@ -1,0 +1,42 @@
+<div class="wrapper" id="sub-area-new">
+
+  <table id="sub-area-new">
+    <tbody>
+
+      <tr>  <!-- header row -->
+        <td class="left-col-head" colspan="2">
+          <h1> Add New Problem </h1>
+        </td>
+
+        <td class="right-col-head">
+          <h4> Frederick Bouldering </h4>
+        </td>
+
+      </tr> <!-- header row -->
+
+      <tr>  <!-- main content -->
+        <td class="left-col" colspan="2">
+
+          <%= form_for @bproblem do |f| %>
+
+            <%= f.text_field :name, placeholder: 'name' %>
+            <%= f.collection_select(:grade, Bproblem::GRADES) %>
+            <%= f.text_area :description, placeholder: 'description' %>
+            <%= f.collection_select(:sub_area_id, SubArea.all, :id, :name, {:selected => @sub_area_id} ) %>
+            <%= f.submit "Submit"%>
+
+          <% end %>
+
+        </td>
+
+        <td class="right-col">
+          <div></div>
+        </td>
+
+      </tr> <!-- main content -->
+
+      <tr><td></td></tr>
+    </tbody>
+  </table>
+
+</div> <!-- wrapper -->

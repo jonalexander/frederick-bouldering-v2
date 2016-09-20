@@ -1,6 +1,8 @@
 require 'pry'
 
 class SubAreasController < ApplicationController
+  before_action :authenticate_user!, :except => [:index, :show]
+
   def index
     @sub_areas = SubArea.all
   end

@@ -1,0 +1,2 @@
+class UsersForce < ApplicationRecord
+end

@@ -223,6 +223,17 @@ body {
   /*opacity: 0.5;*/
 }
 
+.navbar-left {
+  display: inline;
+  text-align: left;
+}
+
+.navbar-right {
+  display: inline;
+  text-align: right;
+  background-color: #fff;
+}
+
 .navbar ul {
   list-style: none;
   margin: 0;
@@ -448,7 +459,7 @@ table a:visited {
 }
 
 .intro-content-button {
-  -webkit-transition-duration: 0.4s; /* Safari */
+  -webkit-transition-duration: 0.1s; /* Safari */
   transition-duration: 0.4s;
   background-color: #ee6;
   border-radius: 3px;
@@ -463,7 +474,7 @@ table a:visited {
 }
 
 .intro-content-button:hover {
-  background-color: #000;
+  background-color: transparent;
   color: #ee6;
   font-weight: 300;
 }
@@ -579,16 +590,16 @@ table a:visited {
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: #000;
+  color: #999;
 }
 ::-moz-placeholder { /* Firefox 19+ */
-  color: #000;
+  color: #999;
 }
 :-ms-input-placeholder { /* IE 10+ */
-  color: #000;
+  color: #999;
 }
 :-moz-placeholder { /* Firefox 18- */
-  color: #000;
+  color: #999;
 }
 
 
@@ -621,4 +632,15 @@ table a:visited {
 
 a:hover {
   background-color: transparent;
+}
+
+.problem-row {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  display: table-row;
+}
+
+.problem-cell {
+  display: table-cell;
+  width: auto;
+  padding-right: 1em;
 }

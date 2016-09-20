@@ -1,7 +1,53 @@
-all problems
-<br>
+<div class="wrapper">
 
-<% @bproblems.each do |problem| %>
-  <%= problem.name %> - <%= problem.grade %>
-  <br>
-<% end %>
+  <table id="main_areas">
+    <tbody>
+
+      <tr>
+        <td class="left-col-head">
+          <h1> All Problems </h1>
+        </td>
+
+        <td class="right-col-head">
+          <h4> Frederick Bouldering </h4>
+        </td>
+
+      </tr>
+
+        <tr>  <!-- main content -->
+
+          <td class="left-col">  <!-- left column / list main areas-->
+            <div class="problem-row"> Sort By:</div>
+            <% @bproblems.each do |bproblem| %>
+              <div class="problem-row">
+                <div class="problem-cell"> <%= bproblem.grade %> </div>
+                <div class="problem-cell"> <%= link_to bproblem.name, bproblem_path(bproblem) %> </div>
+                <div class="problem-cell"> <%= if bproblem.sub_area != nil then bproblem.sub_area.name else '' end %> </div>
+                <div class="problem-cell"> <%= if bproblem.sub_area != nil then bproblem.sub_area.main_area.name else '' end %> </div>
+              </div>
+
+            <% end %>
+
+
+          </td>
+
+          <!-- right column / extra info -->
+          <td class="right-col">
+            <div class="col-block">
+              <h3> Access </h3>
+              <hr>
+              <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in ipsum vitae urna vulputate sollicitudin. Nullam feugiat venenatis neque non egestas. Nunc porttitor in nulla sit amet tristique. Nulla luctus tortor erat, at porta ipsum pellentesque vel. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultricies ac eros. In laoreet accumsan consequat..</p>
+            </div>
+            <div class="col-block">
+              <h3> Contributing </h3>
+              <hr>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in ipsum vitae urna vulputate sollicitudin. Nullam feugiat venenatis neque non egestas. Nunc porttitor in nulla sit amet tristique. Nulla luctus tortor erat, at porta ipsum pellentesque vel. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultricies ac eros. In laoreet accumsan consequat..</p>
+            </div>
+          </td>
+
+        <tr>
+
+      <tr><td></td></tr>
+    </tbody>
+  </table>
+</div>
