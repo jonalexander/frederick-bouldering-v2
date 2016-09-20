@@ -1,3 +1,5 @@
+require 'pry'
+
 class BproblemsController < ApplicationController
   before_action :authenticate_user!, :except => [:index, :show]
 
@@ -22,6 +24,7 @@ class BproblemsController < ApplicationController
 
   def new
     @bproblem = Bproblem.new
+    @image = @bproblem.images.build
 
     # for sub_area form dropdown
     @sub_area_id = params["sub_area_id"]
@@ -31,6 +34,7 @@ class BproblemsController < ApplicationController
   end
 
   def create
+    binding.pry
     @bproblem = Bproblem.new(name: bproblem_params[:name], grade: bproblem_params[:grade], description: bproblem_params[:description])
     @sub_area = SubArea.find(bproblem_params[:sub_area_id])
 
@@ -80,7 +84,7 @@ class BproblemsController < ApplicationController
 
   def bproblem_params
     #params will change depending on how form is structured
-    params.require(:bproblem).permit(:name, :grade, :sub_area_id, :first_ascent_id)
+    params.require(:bproblem).permit(:name, :description, :grade, :sub_area_id, :first_ascent_id, :image)
   end
 
 end

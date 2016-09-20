@@ -20,9 +20,16 @@
           <%= form_for @bproblem do |f| %>
 
             <%= f.text_field :name, placeholder: 'name' %>
-            <%= f.collection_select(:grade, Bproblem::GRADES) %>
+            <%= f.select :grade, Bproblem::GRADES %>
             <%= f.text_area :description, placeholder: 'description' %>
             <%= f.collection_select(:sub_area_id, SubArea.all, :id, :name, {:selected => @sub_area_id} ) %>
+
+            <% #form needs to create new Image model and associate to @bproblem %>
+            <%= f.fields_for :image do |i| %>
+              Add Image
+              <%= i.file_field :source %>
+            <% end %>
+
             <%= f.submit "Submit"%>
 
           <% end %>
