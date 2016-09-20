@@ -37,13 +37,19 @@ class BproblemsController < ApplicationController
     binding.pry
     @bproblem = Bproblem.new(name: bproblem_params[:name], grade: bproblem_params[:grade], description: bproblem_params[:description])
     @sub_area = SubArea.find(bproblem_params[:sub_area_id])
+    @image = Image.new(source: image_params)
 
+    binding.pry
     if @bproblem.save
       @sub_area.bproblems << @bproblem
+      @bproblem.images << @image
+      current_user.images << @image
       redirect_to(@problem)
     else
       render "new"
     end
+
+    binding.pry
     # response_to do |format|
     #     if @bproblem.save
     #       format.html { redirect_to @bproblem, notice: 'Problem was created.'}
@@ -84,7 +90,11 @@ class BproblemsController < ApplicationController
 
   def bproblem_params
     #params will change depending on how form is structured
-    params.require(:bproblem).permit(:name, :description, :grade, :sub_area_id, :first_ascent_id, :image)
+    params.require(:bproblem).permit(:name, :description, :grade, :sub_area_id, :first_ascent_id)
+  end
+
+  def image_params
+    params.require(:image)
   end
 
 end

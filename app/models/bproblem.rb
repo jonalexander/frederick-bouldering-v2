@@ -1,5 +1,5 @@
 class Bproblem < ApplicationRecord
-  validates_presence_of :name, :grade
+  validates_presence_of :name, :grade, :sub_area_id
 
   has_many :images
   accepts_nested_attributes_for :images

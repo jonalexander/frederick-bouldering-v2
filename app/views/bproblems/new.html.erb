@@ -17,7 +17,7 @@
       <tr>  <!-- main content -->
         <td class="left-col" colspan="2">
 
-          <%= form_for @bproblem do |f| %>
+          <%= form_for @bproblem, :html => {:multipart => true} do |f| %>
 
             <%= f.text_field :name, placeholder: 'name' %>
             <%= f.select :grade, Bproblem::GRADES %>
@@ -27,7 +27,7 @@
             <% #form needs to create new Image model and associate to @bproblem %>
             <%= f.fields_for :image do |i| %>
               Add Image
-              <%= i.file_field :source %>
+              <%= i.file_field :source, name: "image[source]" %>
             <% end %>
 
             <%= f.submit "Submit"%>
