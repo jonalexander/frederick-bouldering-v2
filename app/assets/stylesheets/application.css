@@ -107,6 +107,10 @@ table h3 {
   font-size: 1.4em;
 }
 
+.col-block p {
+  color: #999;
+}
+
 table h4 {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 600;
@@ -406,7 +410,7 @@ table a:visited {
 }
 
 .right-col .col-block {
-  background-color: #ee6;
+  background-color: #eee;
   margin-bottom: 2em;
 }
 
@@ -532,9 +536,10 @@ table a:visited {
 }
 
 .col-block li a {
+  text-decoration: underline;
   display: table-row;
   width: 100%;
-  background-color: #ee6;
+  background-color: transparent;
   padding-left: 1em;
 
 }
