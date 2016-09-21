@@ -1,6 +1,6 @@
 <div class="wrapper" id="sub-area-new">
 
-  <table id="sub-area-new">
+  <table id="bproblem-new">
     <tbody>
 
       <tr>  <!-- header row -->
@@ -16,21 +16,8 @@
 
       <tr>  <!-- main content -->
         <td class="left-col" colspan="2">
-
-          <%= form_for @bproblem, html: { multipart: true } do |f| %>
-
-            <%= f.text_field :name, placeholder: 'name' %>
-            <%= f.select :grade, Bproblem::GRADES %>
-            <%= f.text_area :description, placeholder: 'description' %>
-            <%= f.collection_select(:sub_area_id, SubArea.all, :id, :name, {:selected => @sub_area_id} ) %>
-
-            <% #photo uploads %>
-            <%= f.file_field :photos, multiple: true %>
-
-          <%= f.submit "Submit"%>
-
-          <% end %>
-
+          <!-- form -->
+          <%= render 'form' %>
         </td>
 
         <td class="right-col">

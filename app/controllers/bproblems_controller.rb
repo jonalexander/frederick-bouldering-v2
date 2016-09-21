@@ -33,36 +33,10 @@ class BproblemsController < ApplicationController
   end
 
   def create
-    binding.pry
-    @bproblem = Bproblem.new(bproblem_params)
-    @bproblem.user_id = current_user.id
+    @bproblem = Bproblem.create(bproblem_params)
+    current_user.bproblems << @bproblem
 
-    binding.pry
-    @bproblem.save!
-
-    if @bproblem.save
-      redirect_to @bproblem
-    else
-      render :new
-    end
-
-    # @bproblem = Bproblem.new(name: bproblem_params[:name], grade: bproblem_params[:grade], description: bproblem_params[:description])
-    # @sub_area = SubArea.find(bproblem_params[:sub_area_id])
-    # @sub_area.bproblems << @bproblem
-    # @sub_area.save
-    # current_user.bproblems << @bproblem
-    # current_user.save
-    # binding.pry
-
-    # response_to do |format|
-    #     if @bproblem.save
-    #       format.html { redirect_to @bproblem, notice: 'Problem was created.'}
-    #       format.json { render :show, status: :created, location: @bproblem}
-    #     else
-    #       format.html { render :new }
-    #       format.json { render json: @bproblem.errors, status: :unprocessable_entity }
-    #     end
-    # end
+    if @bproblem.save then redirect_to @bproblem else render :new end
   end
 
   def update
@@ -93,8 +67,13 @@ class BproblemsController < ApplicationController
   end
 
   def bproblem_params
-    #params will change depending on how form is structured
-    params.require(:bproblem).permit(:name, :description, :grade, :sub_area_id, :first_ascent_id, photos: [])
+    params.require(:bproblem).permit(:name,
+                                     :description,
+                                     :grade,
+                                     :sub_area_id,
+                                     :first_ascent_id,
+                                     :remove_photo,
+                                     photos: [])
   end
 
 end
@@ -107,3 +86,14 @@ end
 # show
 # GET /bproblems/1
 # GET /bproblems/1.json
+
+
+# response_to do |format|
+#     if @bproblem.save
+#       format.html { redirect_to @bproblem, notice: 'Problem was created.'}
+#       format.json { render :show, status: :created, location: @bproblem}
+#     else
+#       format.html { render :new }
+#       format.json { render json: @bproblem.errors, status: :unprocessable_entity }
+#     end
+# end
