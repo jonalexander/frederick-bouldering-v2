@@ -36,10 +36,12 @@
           <div class="item">
             <div class="problems-header">
 
-              <div id="left"><h3> Beta </h3></div>
+              <div id="left">
+                <h3> Beta </h3>
+              </div>
 
               <div id="right">
-                <%= link_to "+ Add Problem", new_bproblem_path(:sub_area_id => @sub_area.id) %>
+                <%= link_to " Edit ", edit_bproblem_path(@bproblem) %>
                </div>
             </div>
 
@@ -57,10 +59,15 @@
 
           <div class="item" id="photos">
             <h3> Photos </h3>
-            <% @bproblem.photos.each do |photo| %>
-              <%= image_tag photo.thumb.url.to_s %>
-            <% end %>
-            <!-- display list of all problems in sub_area -->
+
+            <% if @bproblem.photos.count < 1 %>
+              This problem does not have any associated photos. <%= link_to 'Add Photo', edit_bproblem_path(@bproblem) %>
+            <% else %>
+              <% @bproblem.photos.each do |photo| %>
+                <%= image_tag photo.thumb.url.to_s %>
+              <% end %>
+            <% end%>
+
           </div>
 
         </td> <!-- left col -->
