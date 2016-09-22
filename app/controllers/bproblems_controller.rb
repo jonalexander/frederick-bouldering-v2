@@ -40,6 +40,8 @@ class BproblemsController < ApplicationController
   end
 
   def update
+    @bproblem = Bproblem.find(params[:id])
+
     respond_to do |format|
       if @bproblem.update(bproblem_params)
         format.html { redirect_to @bproblem, notice: 'Problem was successfully updated.' }
