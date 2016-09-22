@@ -1,6 +1,10 @@
  to do --
 
+* fix brpboelm edit form.. replaces image
+
 * clean up extra models
+* add photo form to bproblem page
+* clean up all forms
 
 
 additional features --

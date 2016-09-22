@@ -12,4 +12,10 @@ Rails.application.routes.draw do
   resources :bproblems,   except: :destroy
   # resources :first_ascents
 
+  # removing ability to update as not to over-write existing photos
+  # generates photos controller
+  resources :bproblems do
+    resources :photos, only: [:create, :destroy]
+  end
+
 end
