@@ -4,6 +4,14 @@
 
 * clean up extra models
 * clean up all forms
+* remove styling from submit buton
+
+* link up with S3
+* migrate to postgres & deploy to heroku
+
+* tests
+* db seeding
+
 
 
 additional features --
