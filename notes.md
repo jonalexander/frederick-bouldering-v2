@@ -1,8 +1,7 @@
-to do
+ to do --
 
-* update routes, block main_areas from being created/edited..etc
-* limit destruction of anything
-
+* clean up extra models
 
 
+additional features --
 * auth w/ google or fb
