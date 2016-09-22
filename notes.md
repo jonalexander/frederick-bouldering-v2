@@ -1,13 +1,13 @@
  to do --
 
-* fix brpboelm edit form.. replaces image
+
 
 * clean up extra models
-* add photo form to bproblem page
 * clean up all forms
 
 
 additional features --
+* add featured photo for problem and display rest as thumbs
 * auth w/ google or fb
 * sort bproblems index
 * static about / landing

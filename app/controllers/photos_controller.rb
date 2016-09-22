@@ -9,7 +9,6 @@ class PhotosController < ApplicationController
   end
 
   def create
-    binding.pry
     add_more_photos(params[:bproblem][:photos])
     redirect_to :back
   end

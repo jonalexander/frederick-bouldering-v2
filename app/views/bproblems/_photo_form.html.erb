@@ -1,0 +1,4 @@
+<%= form_for @bproblem, url:  bproblem_photos_path(@bproblem), method: :post do |f| %>
+  <%= f.file_field :photos, multiple: true %>
+  <%= f.submit "Submit"%>
+<% end %>
