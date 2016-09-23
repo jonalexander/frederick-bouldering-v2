@@ -1,6 +1,8 @@
  to do --
 
-
+- deploy on heroku
+  1. install postgres locally
+- add S3
 
 * clean up extra models
 * clean up all forms
