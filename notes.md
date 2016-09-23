@@ -1,21 +1,14 @@
  to do --
 
-- deploy on heroku
-  1. install postgres locally
-  2. migrated to postgres
-  3. pushed to heroku
-  ** NEED TO SEED DB **
-- add S3
+
+- Add S3 keys to heroku
+
 
 * clean up extra models
 * clean up all forms
-* remove styling from submit buton
-
-* link up with S3
-* migrate to postgres & deploy to heroku
-
+* remove styling from submit button
 * tests
-* db seeding
+
 
 
 

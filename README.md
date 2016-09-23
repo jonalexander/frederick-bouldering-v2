@@ -1,24 +1,30 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Frederick Bouldering
+Open-source project documenting the bouldering (rock climbing) development in Frederick, Maryland.
 
-Things you may want to cover:
+## Contribution Guidelines
+* Please post unobstructed photos of either the problem in full view or the problem being climbed.
+* Add SubAreas within the correct MainAreas. Double check to ensure that the SubArea is not being duplicated.
+* Contact me to submit a new MainArea.
 
-* Ruby version
+## Access Issues
+* Refrain from posting explicit directions or GPS coordinates for problems or areas with sensitive access
+* Strip EXIF data from photos to help enforce this policy.
+* Contact me for before posting if you are unclear about the access of any area.
 
-* System dependencies
+## Currently Working On
+* Refactor styling
+* Refactor views - Ditch ERB and utilize YAML
+* Comments
+* Video embed - paste source url and choose which problems/areas are associated
+* OAuth - Google / FB - streamline sign up process
+* Implement JS to create image galleries
+* Cover images for bproblem, sub_area and main_areas #show routes
 
-* Configuration
+## Why?
+Resources & information regarding the climbing in Frederick is scattered across multiple platforms.
+This is an attempt to house and organize the information in one place that will be available to those
+interested in contributing to the development.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+####Please submit a pull request if you find any bugs. I appreciate it in advance.
