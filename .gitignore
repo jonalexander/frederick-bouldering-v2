@@ -20,7 +20,8 @@
 # Ignore Byebug command history file.
 .byebug_history
 
-
+# Ignore vars stored in env file file
 .env
 
+# Ignore precompiled assets
 /public/assets/*
