@@ -6,6 +6,8 @@ default: &default
 development:
   <<: *default
   database: frederick-bouldering
+  host: localhost
+  password:
 
 test:
   <<: *default
@@ -14,3 +16,5 @@ test:
 production:
   <<: *default
   database: frederick-bouldering-production
+  encoding: utf8
+  password: frederick-bouldering

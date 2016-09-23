@@ -1,0 +1,717 @@
+/* line 1, /Users/jonalexander/Development/fred-bouldering/app/assets/stylesheets/scaffolds.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 33px;
+}
+
+/* line 10, /Users/jonalexander/Development/fred-bouldering/app/assets/stylesheets/scaffolds.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 33px;
+}
+
+/* line 17, /Users/jonalexander/Development/fred-bouldering/app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 23, /Users/jonalexander/Development/fred-bouldering/app/assets/stylesheets/scaffolds.scss */
+a {
+  color: #000;
+}
+/* line 26, /Users/jonalexander/Development/fred-bouldering/app/assets/stylesheets/scaffolds.scss */
+a:visited {
+  color: #666;
+}
+/* line 30, /Users/jonalexander/Development/fred-bouldering/app/assets/stylesheets/scaffolds.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 36, /Users/jonalexander/Development/fred-bouldering/app/assets/stylesheets/scaffolds.scss */
+th {
+  padding-bottom: 5px;
+}
+
+/* line 40, /Users/jonalexander/Development/fred-bouldering/app/assets/stylesheets/scaffolds.scss */
+td {
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+/* line 47, /Users/jonalexander/Development/fred-bouldering/app/assets/stylesheets/scaffolds.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 52, /Users/jonalexander/Development/fred-bouldering/app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+}
+
+/* line 56, /Users/jonalexander/Development/fred-bouldering/app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 62, /Users/jonalexander/Development/fred-bouldering/app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 70, /Users/jonalexander/Development/fred-bouldering/app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 81, /Users/jonalexander/Development/fred-bouldering/app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+/* line 87, /Users/jonalexander/Development/fred-bouldering/app/assets/stylesheets/scaffolds.scss */
+label {
+  display: block;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
+ /*body {
+   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+   font-weight: 300;
+}*/
+
+/*@import url(https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro);*/
+
+
+
+
+h1 {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 600;
+  font-size: 2em;
+  letter-spacing: 2px;
+  line-height: 1em;
+  color: #fff;
+  text-transform: uppercase;
+  padding-bottom: 0.1em;
+  margin: 0;
+}
+
+h2 {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 100;
+  font-size: 2.8em;
+  letter-spacing: 1px;
+  color: #fff;
+  opacity: 0.9;
+  padding-top: 0em;
+  margin: 0;
+  line-height: 1em;
+}
+
+table h1 {
+  color: #000;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 100;
+  font-size: 2.8em;
+  letter-spacing: 1px;
+  opacity: 0.9;
+  padding-top: 0em;
+  margin: 0;
+  line-height: 1em;
+  text-transform: capitalize;
+}
+
+h3 {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 100;
+  font-size: 1em;
+  color: #fff;
+  opacity: 0.8;
+  padding: 0em 0em 0.5em 0em;
+  margin: 0 0 0 0;
+}
+
+h3 a {
+  text-decoration: none;
+  color: #ee6;
+}
+
+h3 a:hover {
+  text-decoration: none;
+  background-color: transparent;
+  color: #fff;
+}
+
+h3 a:visisted {
+  color: #fff;
+}
+
+table h3 {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 100;
+  font-size: 2em;
+  letter-spacing: 1px;
+  color: #000;
+  opacity: 0.9;
+  padding-top: 0.5em;
+  margin: 0;
+  line-height: 1em;
+}
+
+.col-block h3 {
+  padding-left: 0.5em;
+  font-size: 1.4em;
+}
+
+.col-block-clear h3 {
+  padding-left: 0.5em;
+  font-size: 1.4em;
+}
+
+.col-block p {
+  color: #999;
+}
+
+table h4 {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 600;
+  font-size: 1.4em;
+  letter-spacing: 2px;
+  line-height: 1em;
+  color: #000;
+  text-transform: uppercase;
+  padding-bottom: 0.1em;
+  margin: 0;
+  opacity: 0.1;
+  text-align: right;
+}
+
+p {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+body {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  background-color: #000;
+}
+
+header {
+  display: table;
+  width: 100%;
+  background-color: #999;
+  margin: 0;
+}
+
+header #header-text {
+  /*display:table-cell;*/
+  padding: 0 0em 0 0em;
+  font-size: 1em;
+  color: #fff;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  background-color: #ee6;
+}
+
+/* -- wrapper contains everything -- */
+.wrapper {
+  display: table;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	/*margin-right: 0 auto;*/
+  width: 100%;
+  padding: 0;
+  background-color: #fff;
+  color: #fff;
+  min-height:100%;
+  height:92vh;
+
+  /*border-radius: 10px;
+	box-sizing: border-box;
+	box-sizing: content-box;*/
+  /*background-image: url(splash.jpg);*/
+}
+
+
+
+.landing {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  height: 100%;
+  background-image: url('landing-8.jpg');
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+.landing #landing-body {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 15%;
+}
+
+
+.landing ul {
+  list-style: none;
+  margin: 0;
+  display: table;
+  width: auto;
+  padding: 0em 0em 0em 0em;
+}
+
+.landing li {
+  display:table-cell;
+  padding-right: 1em;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.landing li a {
+  color: #ee6;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.landing li a:hover {
+  color: #fff;
+}
+
+.navbar {
+  display: table;
+  margin-left: 10em;
+  width: 90%;
+  padding-left: 10%;
+  margin: 0;
+  background-color: #000;
+  /*opacity: 0.5;*/
+}
+
+.navbar-left {
+  display: inline;
+  text-align: left;
+}
+
+.navbar-right {
+  display: inline;
+  text-align: right;
+  background-color: #fff;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  display: table;
+  width: auto;
+  padding: 0.5em 1em 0.5em 0em;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+}
+
+.navbar li {
+  display:table-cell;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  padding-right: 1.4em;
+}
+
+.navbar li a {
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.navbar li a:hover {
+  color: #ee6;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+  color: #000;
+  padding-top: 1.6em;
+  width: 80%;
+}
+
+table#landing {
+  background-color: #ee6;
+}
+
+td.left-col {
+
+  width: 66%;
+  vertical-align: top;
+}
+
+td.right-col {
+  padding-top: 1em;
+  vertical-align: top;
+  width: 33%
+}
+
+td.left-col-head {
+  width: 66%;
+  vertical-align: top;
+}
+
+td.right-col-head {
+  padding-top: 0em;
+  width: 33%
+}
+
+
+td.third-col {
+  width: 33%;
+  padding-top: 1em;
+  vertical-align: top;
+}
+
+table a {
+  text-decoration: none;
+  color: #000;
+}
+
+table a:hover {
+  background-color: #fff;
+  color: #000;
+  text-decoration: underline;
+}
+
+table a:visited {
+  background-color: #fff;
+  color: #000;
+  text-decoration: underline;
+}
+
+.item {
+  background-color: #fff;
+  padding: 0.3em;
+  border-bottom: 1px;
+}
+
+.main-area-descrip {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  padding-bottom: 1em;
+  font-size: 1em;
+  line-height: 1.4em;
+}
+
+.main-area-descrip-detail-block {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 1em;
+  line-height: 1em;
+  display:inline;
+  width: 10em;
+  padding-right: 1em;
+  padding-left: 1em;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin-right: 1em;
+  margin-top: 0.8em;
+  text-transform: capitalize;
+  background-color: #eee;
+  opacity: 0.6;
+}
+
+.main-area-descrip-detail-block a {
+  opacity: 0.6;
+  background-color: #eee;
+
+}
+
+.main-area-descrip-detail-block a:hover {
+  opacity: 1.0;
+  text-decoration: none;
+  background-color: #eee;
+}
+
+.main-area-descrip-detail-block a:visited{
+  opacity: 0.6;
+  text-decoration: none;
+  background-color: #eee;
+}
+
+.detail-row {
+  padding-top: 1em;
+  width: 100%;
+}
+
+.sub-area-listing {
+  display: block;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 1.6em;
+  margin-bottom: 0.2em;
+}
+
+.sub-area-listing a {
+  display: block;
+  background-color: rgba(238, 238, 238, .6);
+  color: #000;
+  padding: 1em 1em 1em 1em;
+}
+
+.sub-area-listing a:hover {
+  display: block;
+  background-color: rgba(238, 238, 238, 1);
+  color: #000;
+  text-decoration: none;
+}
+
+.sub-area-listing a:visited {
+  display: block;
+  background-color: rgba(238, 238, 238, 1);
+  color: #000;
+  text-decoration: none;
+}
+
+.right-col p {
+  padding: 0.4em 1em 1em 1em;
+  margin: 0 0 0 0;
+}
+
+.right-col .col-block {
+  background-color: #eee;
+  margin-bottom: 2em;
+}
+
+.right-col .col-block-clear {
+  background-color: #eee;
+  margin-bottom: 2em;
+
+}
+
+.intro-content {
+  display: table-row;
+  width: 100px;
+  background-color: #000;
+  background-image: url('landing-4.jpg');
+  background-size: contain;
+}
+
+.intro-content #intro-left {
+  display: table-cell;
+  /*background-color: #666;*/
+  width: 50%;
+  height: 1em;
+
+}
+
+.intro-content #intro-right {
+  display: table-cell;
+  width: 50%;
+  margin-left: 0;
+  margin-right: auto;
+  vertical-align: middle;
+}
+
+.intro-content #intro-header {
+  color: #fff;
+  margin-top: 10em;
+  padding-top: 5em;
+  padding-right: 0;
+  padding-bottom: 10%;
+  padding-left: 10em;
+  text-align: left;
+}
+
+.intro-content-button {
+  -webkit-transition-duration: 0.1s; /* Safari */
+  transition-duration: 0.4s;
+  background-color: #ee6;
+  border-radius: 3px;
+  padding: 10px 5px;
+  border: 0px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 100;
+  font-size: 0.8em;
+  letter-spacing: 1px;
+  color: #000;
+  width: 10em;
+}
+
+.intro-content-button:hover {
+  background-color: transparent;
+  color: #ee6;
+  font-weight: 300;
+}
+
+
+.first-ascent {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  padding-bottom: 1em;
+  font-size: 1.2em;
+  line-height: 1em;
+  text-align: left;
+  padding-right: 1em;
+  opacity: 0.8;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+
+.col-block ul {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 1.2em;
+  list-style: none;
+  margin: 0 0 0 0;
+  padding-left: 1em;
+  padding-bottom: 1em;
+  padding-top: 0.2em;
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.col-block li a {
+  text-decoration: underline;
+  display: table-row;
+  width: 100%;
+  background-color: transparent;
+  padding-left: 1em;
+
+}
+
+.col-block li a:hover {
+  text-decoration: underline;
+}
+
+.col-block hr {
+  display: block;
+  background-color: #fff;
+  height: 0.05em;
+  border: 0;
+  margin: 0em 0;
+  padding: 0;
+}
+
+#edit a {
+}
+
+#sub-area-new {
+  background-color: #ee6;
+}
+
+.left-col input  {
+  padding: 0.4em 0.4em 0.4em 0.4em;
+  color: #000;
+  border: 0;
+  display: block;
+  font-size: 1em;
+  margin-bottom: 0.5em
+}
+
+.left-col textarea  {
+  width: 100%;
+  padding: 0.4em 0.4em 0.4em 0.4em;
+  color: #000;
+  border: 0;
+  display: block;
+  font-size: 1em;
+  margin-bottom: 0.5em
+}
+
+.left-col select {
+  font-size: 1em;
+  border: 0;
+  display: block;
+  width: 100%;
+  padding: 0.4em 0.4em 0.4em 0.4em;
+  margin-bottom: 0.5em
+
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #999;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #999;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #999;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #999;
+}
+
+
+.problems-header{
+  height: auto;
+  display: table-row;
+}
+.problems-header #left {
+  width: 100em;
+  display: table-cell;
+}
+
+.problems-header #right {
+  width: 50%;
+  text-align: right;
+  font-size: 0.8em;
+  min-height: 100%;
+  display: table-cell;
+  vertical-align: center;
+  font-size: 1em;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.item #photos {
+  vertical-align: center;
+  text-align:center;
+}
+
+
+
+a:hover {
+  background-color: transparent;
+}
+
+.problem-row {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  display: table-row;
+}
+
+.problem-cell {
+  display: table-cell;
+  width: auto;
+  padding-right: 1em;
+}
