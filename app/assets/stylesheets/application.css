@@ -180,7 +180,7 @@ body {
   height: 100%;
   background-color: #000;
   height: 100%;
-  background-image: url('landing-8.jpg');
+  background-image: url('https://s3.amazonaws.com/fred-bouldering/frederick-bouldering-landing.jpg');
   background-size: cover;
   background-position: right;
   background-repeat: no-repeat;
@@ -420,39 +420,8 @@ table a:visited {
 
 }
 
-.intro-content {
-  display: table-row;
-  width: 100px;
-  background-color: #000;
-  background-image: url('landing-4.jpg');
-  background-size: contain;
-}
 
-.intro-content #intro-left {
-  display: table-cell;
-  /*background-color: #666;*/
-  width: 50%;
-  height: 1em;
-
-}
-
-.intro-content #intro-right {
-  display: table-cell;
-  width: 50%;
-  margin-left: 0;
-  margin-right: auto;
-  vertical-align: middle;
-}
-
-.intro-content #intro-header {
-  color: #fff;
-  margin-top: 10em;
-  padding-top: 5em;
-  padding-right: 0;
-  padding-bottom: 10%;
-  padding-left: 10em;
-  text-align: left;
-}
+/* refactor to landing */
 
 .intro-content-button {
   -webkit-transition-duration: 0.1s; /* Safari */
