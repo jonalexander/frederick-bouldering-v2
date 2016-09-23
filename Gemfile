@@ -1,12 +1,11 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
-# Use sqlite3 as the database for Active Record
-
+# Protecting AWS keys & other variables
+gem 'dotenv-rails', :groups => [:development, :test]
+# Database
 gem 'pg'
-
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -18,7 +17,6 @@ gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
-gem 'pry'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -38,9 +36,6 @@ gem 'devise'
 gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
 gem 'mini_magick', '~> 4.3'
 
-gem 'taps'
-
-
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -49,6 +44,7 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'pry'
 end
 
 group :development do
