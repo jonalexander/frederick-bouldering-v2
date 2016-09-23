@@ -2,6 +2,9 @@
 
 - deploy on heroku
   1. install postgres locally
+  2. migrated to postgres
+  3. pushed to heroku
+  ** NEED TO SEED DB **
 - add S3
 
 * clean up extra models
