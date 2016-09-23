@@ -2,8 +2,8 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
-# Protecting AWS keys & other variables
-gem 'dotenv-rails'
+# Protecting 
+gem 'dotenv-rails', :groups => [:development, :test]
 # Database
 gem 'pg'
 # Use Puma as the app server
