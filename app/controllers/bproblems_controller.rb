@@ -32,7 +32,7 @@ class BproblemsController < ApplicationController
 
   def create
     @bproblem = Bproblem.create(bproblem_params)
-    add_photos(bproblem_params[:photos])
+    add_photos(bproblem_params[:photos]) if bproblem_params[:photos]
     current_user.bproblems << @bproblem
 
     if @bproblem.save then redirect_to @bproblem else render :new end
