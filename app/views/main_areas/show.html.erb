@@ -29,8 +29,16 @@
 
           <div class="item">
             <h3> Description </h3>
-            <div class="main-area-descrip">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in ipsum vitae urna vulputate sollicitudin. Nullam feugiat venenatis neque non egestas. Nunc porttitor in nulla sit amet tristique. Nulla luctus tortor erat, at porta ipsum pellentesque vel. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultricies ac eros. In laoreet accumsan consequat..</div>
+            <div class="main-area-descrip">
+              <%= @main_area.description %>
+            </div>
           </div>
+          <% @main_area.sub_areas.first(5).each do |sub_area| %>
+            <div class="sub-area-listing">
+                <%= link_to sub_area.name, sub_area_path(sub_area) %>
+            </div>
+          <% end %>
+
 
           <div class="item">
             <h3> Getting There </h3>
@@ -42,58 +50,25 @@
         <td class="right-col"> <!-- right col -->
 
           <div class="col-block">
-            <h3> More Resources </h3>
+            <h3> Access </h3>
             <hr>
             <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in ipsum vitae urna vulputate sollicitudin. Nullam feugiat venenatis neque non egestas. Nunc porttitor in nulla sit amet tristique. Nulla luctus tortor erat, at porta ipsum pellentesque vel. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultricies ac eros. In laoreet accumsan consequat..</p>
+          </div>
+
+          <div class="col-block">
+            <h3> Recent Additions </h3>
+            <hr>
+            <% @main_area.bproblems.last(5).each do |bproblem| %>
+              <% bproblem_extended = "#{bproblem.name} #{bproblem.grade}" %>
+              <div class="sub-area-listing">
+                  <%= link_to bproblem_extended, bproblem_path(bproblem) %>
+              </div>
+            <% end %>
           </div>
 
         </td> <!-- right col- -->
 
       </tr> <!-- main content -->
-
-      <tr> <!-- bottom content row -->
-        <td class="third-col">
-          <h3> Areas </h3>
-          <hr>
-          <!-- generate list of sub-areas -->
-          <% @main_area.sub_areas.first(5).each do |sub_area| %>
-            <div class="sub-area-listing">
-                <%= link_to sub_area.name, sub_area_path(sub_area) %>
-            </div>
-          <% end %>
-
-          <div class="sub-area-listing">
-            <!-- pass @main_area id to use in controller to pre-select main_area from dropdown on new sub_area form -->
-            <%= link_to '+ Add Another', new_sub_area_path(:main_area_id => @main_area.id) %>
-          </div>
-
-        </td>
-
-        <td class="third-col">
-          <h3> Recent Additions </h3>
-          <hr>
-          <% @main_area.bproblems.last(5).each do |bproblem| %>
-            <% bproblem_extended = "#{bproblem.name} #{bproblem.grade}" %>
-            <div class="sub-area-listing">
-                <%= link_to bproblem_extended, bproblem_path(bproblem) %>
-            </div>
-          <% end %>
-
-        </td>
-
-        <td class="third-col">
-          <h3> Contributors </h3>
-          <hr>
-          <!-- hard coded... come back -->
-            <div class="sub-area-listing">
-              <a href="#"> First Ascensionist #1 </a>
-            </div>
-            <div class="sub-area-listing">
-              <a href="#"> First Ascensionist #2 </a>
-            </div>
-
-        </td>
-      </tr>
 
       <tr><td></td></tr>
     </tbody>

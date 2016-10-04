@@ -1,14 +1,27 @@
- to do --
-  * up next..
-
-  1. set conditional statement to use :fog for production & :file for dev/testing
-
-* Add subareas is not working
-* Update gitignore
-* remove notes from remote repo
 
 
+Design & Structure Changes
+- A Subarea like Dixie has areas within it
+like Sasquatch Roof area and the Bullfrog Boulder
+- each main area needs a map with all the sub-areas plotted on it
 
+
+* edit styling & layout
+  - smaller text
+  - better use of space
+
+* move nav to right
+
+* style and position ALERTS
+
+
+* remove contributors from main_area #show
+* bproblem show page
+  - needs to list all other problems in Subarea
+  - also list problems of similar grade
+  - remove FA
+  - custom JS overlay for image link clicking
+  http://www.w3schools.com/howto/howto_css_modal_images.asp
 
 additional features --
 * add featured photo for problem and display rest as thumbs
