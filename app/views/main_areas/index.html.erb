@@ -22,7 +22,7 @@
             <% @main_areas.each do |main_area| %>
                 <div class="item">
                   <h3> <%= link_to main_area.name, main_area_path(main_area) %> </h3>
-                  <div class="main-area-descrip">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in ipsum vitae urna vulputate sollicitudin. Nullam feugiat venenatis neque non egestas. Nunc porttitor in nulla sit amet tristique. Nulla luctus tortor erat, at porta ipsum pellentesque vel. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultricies ac eros. In laoreet accumsan consequat..</div>
+                  <div class="main-area-descrip"> <%= main_area.description %> </div>
 
                   <div class="main-area-descrip-detail-block">
                     Sub-areas: <%= main_area.sub_areas.count %> <!-- dynamic -->
