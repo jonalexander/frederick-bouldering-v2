@@ -1,19 +1,11 @@
  to do --
+  * up next..
 
-* Configure CarrierWave & S3
-  - basic maintenance and check up
-  - Add S3 keys to heroku XX
-
-  1. change storage from :file to :fog in photo_uploader.rb
-  2. modify carrierwave.rb with fog/s3 credentials
-  3. change fog-aws to fog in Gemfile
-
-  * dotenv was not installed... ?
-  1. add to Gemfile
-  2. add 'require dotenv' / Dotenv.load into application.rb
+  1. set conditional statement to use :fog for production & :file for dev/testing
 
 * Add subareas is not working
-
+* Update gitignore
+* remove notes from remote repo
 
 
 

@@ -1,8 +1,8 @@
 require_relative 'boot'
 require 'rails/all'
 require 'carrierwave'
-require 'dotenv'
-Dotenv.load
+# require 'dotenv-rails'
+# Dotenv.load
 
 Bundler.require(*Rails.groups)
 
