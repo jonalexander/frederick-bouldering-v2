@@ -63,7 +63,7 @@ table h1 {
 h3 {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 100;
-  font-size: 1em;
+  font-size: 1.6em;
   color: #fff;
   opacity: 0.8;
   padding: 0em 0em 0.5em 0em;
@@ -88,7 +88,7 @@ h3 a:visisted {
 table h3 {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 100;
-  font-size: 2em;
+  font-size: 1.6em;
   letter-spacing: 1px;
   color: #000;
   opacity: 0.9;
@@ -379,27 +379,27 @@ table a:visited {
 .sub-area-listing {
   display: block;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-size: 1.6em;
+  font-size: 1em;
   margin-bottom: 0.2em;
 }
 
 .sub-area-listing a {
   display: block;
-  background-color: rgba(238, 238, 238, .6);
+  background-color: transparent;
   color: #000;
   padding: 1em 1em 1em 1em;
 }
 
 .sub-area-listing a:hover {
   display: block;
-  background-color: rgba(238, 238, 238, 1);
+  background-color: rgba(238, 238, 238, .6);
   color: #000;
   text-decoration: none;
 }
 
 .sub-area-listing a:visited {
   display: block;
-  background-color: rgba(238, 238, 238, 1);
+  background-color: transparent;
   color: #000;
   text-decoration: none;
 }
@@ -410,7 +410,7 @@ table a:visited {
 }
 
 .right-col .col-block {
-  background-color: #eee;
+  background-color: transparent;
   margin-bottom: 2em;
 }
 
@@ -445,23 +445,11 @@ table a:visited {
 }
 
 
-.first-ascent {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  padding-bottom: 1em;
-  font-size: 1.2em;
-  line-height: 1em;
-  text-align: left;
-  padding-right: 1em;
-  opacity: 0.8;
-  text-transform: uppercase;
-  font-weight: bold;
-  letter-spacing: 2px;
-}
 
 
 .col-block ul {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-size: 1.2em;
+  font-size: 1em;
   list-style: none;
   margin: 0 0 0 0;
   padding-left: 1em;
@@ -492,9 +480,6 @@ table a:visited {
   border: 0;
   margin: 0em 0;
   padding: 0;
-}
-
-#edit a {
 }
 
 #sub-area-new {

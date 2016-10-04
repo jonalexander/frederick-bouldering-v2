@@ -5,6 +5,10 @@ Design & Structure Changes
 like Sasquatch Roof area and the Bullfrog Boulder
 - each main area needs a map with all the sub-areas plotted on it
 
+* change styling of recently added problems
+
+* sub_area
+  - add form field for GPS coordinates==
 
 * edit styling & layout
   - smaller text
@@ -13,6 +17,9 @@ like Sasquatch Roof area and the Bullfrog Boulder
 * move nav to right
 
 * style and position ALERTS
+
+* add video model, associated with a bproblems
+  - user pastes URL, we generate an embed link
 
 
 * remove contributors from main_area #show
