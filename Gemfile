@@ -32,7 +32,11 @@ gem 'bcrypt', '~> 3.1.7'
 # Authentication
 gem 'devise'
 
+# Access Key storage - listed here to load variables before Fog
+gem 'dotenv-rails', :groups => [:development, :test]
+
 # Image uploads
+gem 'fog' # use S3 for storage with CarrierWave
 gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
 gem 'mini_magick', '~> 4.3'
 

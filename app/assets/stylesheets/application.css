@@ -501,7 +501,7 @@ table a:visited {
   background-color: #ee6;
 }
 
-.left-col input  {
+/*.left-col input  {
   padding: 0.4em 0.4em 0.4em 0.4em;
   color: #000;
   border: 0;
@@ -527,8 +527,7 @@ table a:visited {
   width: 100%;
   padding: 0.4em 0.4em 0.4em 0.4em;
   margin-bottom: 0.5em
-
-}
+}*/
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: #999;
