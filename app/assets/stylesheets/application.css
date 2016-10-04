@@ -218,32 +218,24 @@ body {
 }
 
 .navbar {
+  text-align: right;
   display: table;
   margin-left: 10em;
   width: 90%;
   padding-left: 10%;
   margin: 0;
   background-color: #000;
+  float: right;
   /*opacity: 0.5;*/
 }
 
-.navbar-left {
-  display: inline;
-  text-align: left;
-}
-
-.navbar-right {
-  display: inline;
-  text-align: right;
-  background-color: #fff;
-}
-
 .navbar ul {
+  float: right;
   list-style: none;
   margin: 0;
   display: table;
   width: auto;
-  padding: 0.5em 1em 0.5em 0em;
+  padding: 0.5em 10% 0.5em 0em;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 
 }

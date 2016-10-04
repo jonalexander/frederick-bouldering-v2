@@ -12,9 +12,11 @@
     <div class="navbar">
 
         <ul>
-          <li> <%= link_to "Areas", main_areas_path %> </li>
+          <li> <%= link_to "Climbing Areas", main_areas_path %> </li>
           <li> <%= link_to "Boulder Problems", bproblems_path %> </li>
+          <li><a href="#"> Contribute <a/></li>
           <li><a href="#"> About <a/></li>
+          <li></li>
 
         <% if user_signed_in? %>
           <li> <%= link_to 'Sign Out',destroy_user_session_path, method: :delete %> </li>
