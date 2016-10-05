@@ -96,6 +96,9 @@ table h3 {
   padding-top: 0.5em;
   margin: 0;
   line-height: 1em;
+  display: block;
+  background-color: #eee;
+  padding-left: 0.2em;
 }
 
 .col-block h3 {
@@ -108,7 +111,7 @@ table h3 {
 }
 
 .col-block p {
-  color: #999;
+  color: #606060;
 }
 
 table h4 {
@@ -129,7 +132,7 @@ p {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   padding: 0;
   margin: 0;
-  color: #999;
+  color: #606060;
 }
 
 body {
@@ -140,7 +143,7 @@ body {
 header {
   display: table;
   width: 100%;
-  background-color: #999;
+  background-color: #606060;
   margin: 0;
 }
 
@@ -320,7 +323,7 @@ table a:visited {
 
 .item {
   background-color: #fff;
-  padding: 0em;
+  padding: 0em 0em 1em 0em;
   border-bottom: 1px;
 }
 
@@ -402,7 +405,7 @@ table a:visited {
 }
 
 .right-col p {
-  color: #999;
+  color: #606060;
   margin: 0 0 0 0;
 }
 
@@ -512,16 +515,16 @@ table a:visited {
 }*/
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: #999;
+  color: #606060;
 }
 ::-moz-placeholder { /* Firefox 19+ */
-  color: #999;
+  color: #606060;
 }
 :-ms-input-placeholder { /* IE 10+ */
-  color: #999;
+  color: #606060;
 }
 :-moz-placeholder { /* Firefox 18- */
-  color: #999;
+  color: #606060;
 }
 
 

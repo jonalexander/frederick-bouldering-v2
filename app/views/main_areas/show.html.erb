@@ -23,12 +23,11 @@
           <div class="item">
             <h3> Description </h3>
             <p> <%= @main_area.description %> </p>
-
           </div>
 
           <div class="item">
             <h3> Getting There </h3>
-            <div class="main-area-descrip"><p> <%= @main_area.location %> </p></div>
+            <p> <%= @main_area.location %> </p>
           </div>
 
           <div class="item">
@@ -42,7 +41,7 @@
 
 
           <div class="item">
-            <h3> Map </h3>
+            <br>
             <div style="width: 100%; overflow: hidden;">
               <iframe
                  src="<%= @map_url %>"
