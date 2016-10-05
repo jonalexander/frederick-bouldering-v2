@@ -33,6 +33,7 @@ h1 {
   text-transform: uppercase;
   padding-bottom: 0.1em;
   margin: 0;
+  display: inline;
 }
 
 h2 {
@@ -88,7 +89,7 @@ h3 a:visisted {
 table h3 {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 100;
-  font-size: 1.6em;
+  font-size: 1.2em;
   letter-spacing: 1px;
   color: #000;
   opacity: 0.9;
@@ -99,12 +100,12 @@ table h3 {
 
 .col-block h3 {
   padding-left: 0.5em;
-  font-size: 1.4em;
+  font-size: 1.2em;
 }
 
 .col-block-clear h3 {
   padding-left: 0.5em;
-  font-size: 1.4em;
+  font-size: 1.2em;
 }
 
 .col-block p {
@@ -127,6 +128,8 @@ table h4 {
 
 p {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  padding: 0;
+  margin: 0;
 }
 
 body {
@@ -276,7 +279,7 @@ td.left-col {
 }
 
 td.right-col {
-  padding-top: 1em;
+  padding-top: 0em;
   vertical-align: top;
   width: 33%
 }
@@ -317,7 +320,7 @@ table a:visited {
 
 .item {
   background-color: #fff;
-  padding: 0.3em;
+  padding: 0em;
   border-bottom: 1px;
 }
 
@@ -371,7 +374,7 @@ table a:visited {
 .sub-area-listing {
   display: block;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-size: 1em;
+  font-size: 1.2em;
   margin-bottom: 0.2em;
 }
 
@@ -380,13 +383,13 @@ table a:visited {
   background-color: transparent;
   color: #000;
   padding: 1em 1em 1em 1em;
+  text-decoration: underline;
 }
 
 .sub-area-listing a:hover {
   display: block;
   background-color: rgba(238, 238, 238, .6);
   color: #000;
-  text-decoration: none;
 }
 
 .sub-area-listing a:visited {
@@ -407,7 +410,7 @@ table a:visited {
 }
 
 .right-col .col-block-clear {
-  background-color: #eee;
+  background-color: transparent;
   margin-bottom: 2em;
 
 }
@@ -524,20 +527,26 @@ table a:visited {
   height: auto;
   display: table-row;
 }
-.problems-header #left {
-  width: 100em;
-  display: table-cell;
+.left-col-head #left {
+  width: 50%;
+  display: inline;
 }
 
-.problems-header #right {
-  width: 50%;
+.left-col-head #right {
+  width: auto;
+  padding-left: 0.4em;
   text-align: right;
   font-size: 0.8em;
   min-height: 100%;
-  display: table-cell;
+  display: inline;
   vertical-align: center;
   font-size: 1em;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.left-col-head #right a {
+  color: red;
+  font-size: 0.8em;
 }
 
 .item #photos {

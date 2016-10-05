@@ -1,26 +1,59 @@
-<h2>Log in</h2>
+<div class="wrapper">
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+  <table id="bproblem-index">
+    <tbody>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+      <tr>
+        <td class="left-col-head">
+          <h1> Login </h1>
+        </td>
 
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  <% end -%>
+        <td class="right-col-head">
+          <h4> Frederick Bouldering </h4>
+        </td>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
+      </tr>
 
-<%= render "devise/shared/links" %>
+        <tr>  <!-- main content -->
+
+          <td class="left-col">  <!-- left column / list main areas-->
+
+            <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+              <div class="field">
+                <%= f.email_field :email, autofocus: true, placeholder: 'Email' %>
+              </div>
+
+              <div class="field">
+                <%= f.password_field :password, autocomplete: "off", placeholder: 'Password' %>
+              </div>
+
+              <% if devise_mapping.rememberable? -%>
+                <div class="field">
+                  <%= f.check_box :remember_me %>
+                  <p> <%= f.label :remember_me %> </p>
+                </div>
+              <% end -%>
+
+              <div class="actions">
+                <%= f.submit "Login" %>
+              </div>
+            <% end %>
+
+            <p> <%= render "devise/shared/links" %> </p>
+
+          </td>
+
+          <!-- right column / extra info -->
+          <td class="right-col">
+            <div class="col-block">
+
+            </div>
+
+          </td>
+
+        <tr>
+
+      <tr><td></td></tr>
+    </tbody>
+  </table>
+</div>
