@@ -22,14 +22,13 @@
 
           <div class="item">
             <h3> Description </h3>
-            <div class="main-area-descrip">
-              <%= @main_area.description %>
-            </div>
+            <p> <%= @main_area.description %> </p>
+
           </div>
 
           <div class="item">
             <h3> Getting There </h3>
-            <div class="main-area-descrip">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in ipsum vitae urna vulputate sollicitudin. Nullam feugiat venenatis neque non egestas. Nunc porttitor in nulla sit amet tristique. Nulla luctus tortor erat, at porta ipsum pellentesque vel. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultricies ac eros. In laoreet accumsan consequat..</div>
+            <div class="main-area-descrip"><p> <%= @main_area.location %> </p></div>
           </div>
 
           <div class="item">
@@ -61,9 +60,8 @@
 
           <div class="col-block">
             <h3> Access </h3>
-          </div>
+            <div class="main-area-descrip"><p> <%= @main_area.access %> </p></div>
 
-          <div class="col-block">
             <h3> Recent Additions </h3>
             <hr>
             <% @main_area.bproblems.last(5).each do |bproblem| %>
@@ -72,6 +70,10 @@
                   <%= link_to bproblem_extended, bproblem_path(bproblem) %>
               </div>
             <% end %>
+          </div>
+
+          <div class="col-block">
+
           </div>
 
         </td> <!-- right col- -->
