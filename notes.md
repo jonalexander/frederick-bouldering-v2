@@ -1,6 +1,15 @@
 * subarea TOPO UPLOADER
 
-* Update forms to accomodate new pieces of info
+* add edit links to sub_areas and b_problems
+
+* bug when submiting photo form without photo attachment
+
+* sort bproblems #index
+
+* featured photo for
+  -main_area_
+  -sub_area
+  -bproblem
 
 * bproblem show page
   - custom JS overlay for image link clicking

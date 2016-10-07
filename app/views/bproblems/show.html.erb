@@ -8,7 +8,6 @@
             <div id="left"><h1> <%= "#{@bproblem.name} #{@bproblem.grade}" %> </h1></div>
             <div id="right"> <%= link_to " Edit ", edit_bproblem_path(@bproblem) %> </div>
 
-
           <!-- breadcrumbs -->
           <div class="detail-row">
             <div class="main-area-descrip-detail-block">
@@ -39,6 +38,14 @@
             </div>
 
             <div class="main-area-descrip"> <%= @bproblem.description %> </div>
+          </div>
+
+          <div class="item">
+            <div class="problems-header">
+              <h3> Getting There </h3>
+            </div>
+
+            <div class="main-area-descrip"> <%= @bproblem.location %> </div>
           </div>
 
           <div class="item" id="photos">

@@ -8,26 +8,16 @@ class SubAreasController < ApplicationController
   end
 
   def create
-    @sub_area = SubArea.new(name: sub_area_params[:name], description: sub_area_params[:description])
-    @main_area = MainArea.find(sub_area_params[:main_area_id])
-
-    if @sub_area.save
-      @main_area.sub_areas << @sub_area
-      redirect_to(@sub_area)
-    else
-      render "new"
-    end
+    @sub_area = SubArea.new(sub_area_params)
+    if @sub_area.save then redirect_to(@sub_area) else render "new" end
   end
 
   def new
     @sub_area = SubArea.new
-
-    # use main_area_id to set default collection select in form
     @main_area_id = params["main_area_id"]
   end
 
   def edit
-
   end
 
   def show
@@ -48,6 +38,6 @@ class SubAreasController < ApplicationController
   private
 
   def sub_area_params
-    params.require(:sub_area).permit(:name, :description, :main_area_id)
+    params.require(:sub_area).permit(:name, :description, :location, :main_area_id)
   end
 end

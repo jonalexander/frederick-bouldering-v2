@@ -37,6 +37,9 @@
                   <%= link_to "#{sub_area.name} (#{sub_area.bproblems.count})", sub_area_path(sub_area) %>
               </div>
             <% end %>
+
+            <br>
+            <%= link_to '+ Add Area', new_sub_area_path, :main_area_id => @main_area.id %>
           </div>
 
 

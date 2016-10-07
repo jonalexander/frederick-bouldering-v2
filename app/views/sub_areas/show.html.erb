@@ -5,11 +5,14 @@
 
       <tr>  <!-- header row -->
         <td class="left-col-head" colspan="2">
-          <h1> <%= @sub_area.name %> </h1>
+          <div id="left"><h1> <%= @sub_area.name %> </h1></div>
+          <div id="right"> <%= link_to " Edit ", edit_sub_area_path(@sub_area) %> </div>
 
           <!-- breadcrumbs -->
-          <div class="main-area-descrip-detail-block">
-            <%= link_to @main_area.name, main_area_path(@main_area) %>
+          <div class="detail-row">
+            <div class="main-area-descrip-detail-block">
+              <%= link_to @main_area.name, main_area_path(@main_area) %>
+            </div>
           </div>
         </td>
 

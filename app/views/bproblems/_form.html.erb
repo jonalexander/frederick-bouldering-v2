@@ -1,13 +1,20 @@
 <%= form_for @bproblem, html: { multipart: true } do |f| %>
 
+  <%= f.label :name %>
   <%= f.text_field :name, placeholder: 'name' %>
+
+  <%= f.label :grade %>
   <%= f.select :grade, Bproblem::GRADES %>
-  <%= f.text_area :description, placeholder: 'description' %>
+
+  <%= f.label :description %>
+  <%= f.text_area :description, placeholder: 'Provide a description of the problem.' %>
+
+  <%= f.label 'Area' %>
   <%= f.collection_select(:sub_area_id, SubArea.all, :id, :name, {:selected => @sub_area_id} ) %>
 
-  <% #photo uploads %>
+  <%= f.label 'Attach Photos' %>
   <%= f.file_field :photos, multiple: true %>
-  <% f.hidden_field :photos_cache %>
+  <%  f.hidden_field :photos_cache %>
 
 <%= f.submit "Submit"%>
 

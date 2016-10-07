@@ -2,7 +2,7 @@ require 'pry'
 
 class BproblemsController < ApplicationController
   before_action :authenticate_user!, :except => [:index, :show]
-  before_action :set_bproblem, :except => [:index]
+  # before_action :set_bproblem, :except => [:index, :new]
 
   def index
     @main_areas = MainArea.all
@@ -11,6 +11,7 @@ class BproblemsController < ApplicationController
 
   def show
     # refactor
+    @bproblem = Bproblem.find(params[:id])
     @sub_area = @bproblem.sub_area
     @main_area = @sub_area.main_area
 
@@ -31,11 +32,14 @@ class BproblemsController < ApplicationController
   end
 
   def create
-    @bproblem = Bproblem.create(bproblem_params)
-    add_photos(bproblem_params[:photos]) if bproblem_params[:photos]
-    current_user.bproblems << @bproblem
-
-    if @bproblem.save then redirect_to @bproblem else render :new end
+    @bproblem = Bproblem.new(bproblem_params)
+    
+    if @bproblem.save
+      current_user.bproblems << @bproblem
+      redirect_to @bproblem
+    else
+      render :new
+    end
   end
 
   def update
@@ -61,19 +65,20 @@ class BproblemsController < ApplicationController
 
   private
 
-  def set_bproblem
-    @bproblem = Bproblem.find(params[:id])
-  end
+  # def set_bproblem
+  #   @bproblem = Bproblem.find(params[:id])
+  # end
 
   def bproblem_params
     params.require(:bproblem)
      .permit(:name,
              :description,
              :grade,
+             :location,
              :sub_area_id,
              :first_ascent_id,
              :remove_photo,
-             photos: [])
+             {:photos => []})
   end
 
 end
