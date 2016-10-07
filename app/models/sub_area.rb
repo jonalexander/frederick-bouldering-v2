@@ -4,7 +4,7 @@ class SubArea < ApplicationRecord
                         :location,
                         :main_area_id
 
-  validates             :uniqueness => true
+  validate              :uniqueness => true
 
   belongs_to            :main_area
   has_many              :bproblems
