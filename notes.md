@@ -1,10 +1,9 @@
 * subarea TOPO UPLOADER
 
-* add edit links to sub_areas and b_problems
-
-* bug when submiting photo form without photo attachment
 
 * sort bproblems #index
+
+* create control to prevent duplicate entries
 
 * featured photo for
   -main_area_

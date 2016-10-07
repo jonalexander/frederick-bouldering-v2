@@ -3,8 +3,6 @@ class MainArea < ApplicationRecord
                         :description,
                         :location
 
-  validate              :uniqueness => true
-
   has_many :sub_areas
   has_many :bproblems, through: :sub_areas
 

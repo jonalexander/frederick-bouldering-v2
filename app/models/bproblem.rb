@@ -4,9 +4,7 @@ class Bproblem < ApplicationRecord
                                 :description,
                                 :location,
                                 :sub_area_id
-
-  validate                     :uniqueness => true
-
+                                
   mount_uploaders               :photos, PhotoUploader
   serialize                     :photos, Array
 

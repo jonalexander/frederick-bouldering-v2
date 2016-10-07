@@ -3,9 +3,7 @@ class SubArea < ApplicationRecord
                         :description,
                         :location,
                         :main_area_id
-
-  validate              :uniqueness => true
-
+                        
   belongs_to            :main_area
   has_many              :bproblems
 end
