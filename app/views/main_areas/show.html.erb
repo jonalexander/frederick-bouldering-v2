@@ -31,7 +31,7 @@
           </div>
 
           <div class="item">
-            <h3> Breakdown By Area </h3>
+            <h3> Bouldering By Area </h3>
             <% @main_area.sub_areas.each do |sub_area| %>
               <div class="sub-area-listing">
                   <%= link_to "#{sub_area.name} (#{sub_area.bproblems.count})", sub_area_path(sub_area) %>
