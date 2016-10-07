@@ -2,14 +2,8 @@
 
 * style and position ALERTS
 
-* subarea
-  * needs topo image column
-  * needs location column
-  * link to description on show
-  * photos should iterate through boulder problems and grab last 6 photos
-
-** REALLY NEED A THIRD AREA WITHIN SUBAREA
-
+* subarea TOPO UPLOADER
+* subarea photos should iterate through boulder problems and grab last 6 photos
 
 * add video model, associated with a bproblems
   - user pastes URL, we generate an embed link

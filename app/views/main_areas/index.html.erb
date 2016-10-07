@@ -22,16 +22,13 @@
             <% @main_areas.each do |main_area| %>
                 <div class="item">
                   <h3> <%= link_to main_area.name, main_area_path(main_area) %> </h3>
-                  <div class="main-area-descrip"> <%= main_area.description %> </div>
+                  <div class="main-area-descrip"> <%= main_area.description[0..200].gsub(/\s\w+$/,'...') %> </div>
 
                   <div class="main-area-descrip-detail-block">
                     Sub-areas: <%= main_area.sub_areas.count %> <!-- dynamic -->
                   </div>
                   <div class="main-area-descrip-detail-block">
                     Total Problems: <%= main_area.bproblems.count %> <!-- dynamic -->
-                  </div>
-                  <div class="main-area-descrip-detail-block">
-                    Access: <%= main_area.access %>
                   </div>
                 </div>
             <% end %>

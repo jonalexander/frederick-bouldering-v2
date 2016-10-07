@@ -26,7 +26,7 @@
 
           <div class="item">
             <h3> Description </h3>
-            <div class="main-area-descrip">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in ipsum vitae urna vulputate sollicitudin. Nullam feugiat venenatis neque non egestas. Nunc porttitor in nulla sit amet tristique. Nulla luctus tortor erat, at porta ipsum pellentesque vel. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultricies ac eros. In laoreet accumsan consequat..</div>
+            <div class="main-area-descrip"> <%= @sub_area.description %> </div>
           </div>
 
           <div class="item">
@@ -39,7 +39,8 @@
 
               <div id="right">
                 <%= link_to "+ Add Problem", new_bproblem_path(:sub_area_id => @sub_area.id) %>
-               </div>
+
+              </div>
             </div>
 
             <!-- display list of all problems in sub_area -->
@@ -59,18 +60,7 @@
           <div class="col-block">
             <h3> Topo </h3>
             <hr>
-            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in ipsum vitae urna vulputate sollicitudin. Nullam feugiat venenatis neque non egestas. Nunc porttitor in nulla sit amet tristique. Nulla luctus tortor erat, at porta ipsum pellentesque vel. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultricies ac eros. In laoreet accumsan consequat..</p>
           </div>
-
-          <div class="col-block-clear">
-            <h3> Photos </h3>
-          </div>
-
-  
-
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
 
         </td> <!-- right col- -->
 
