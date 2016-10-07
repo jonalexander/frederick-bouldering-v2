@@ -9,16 +9,23 @@
 
 # main_areas
 
-catoctin = MainArea.create(name: 'Catoctin', description: 'Catoctin National Park is located in Thurmont, Maryland.')
+catoctin = MainArea.create(
+  name: 'Catoctin',
+  description: 'Catoctin Mountain Park is located in Thurmont, Maryland on the north side of route 77 just west of town. While climbing access has been restricted to certain parts of the park by permit only, developed bouldering can be found all around the park. As of 2016 bouldering is now permitted within the park. The rock found here is almost always greenstone with the occasional patch of quartzite. The rock quality spans a wide range from complete choss to some of the best in the area.',
+  location: 'From Thurmont, Maryland head west on route 77 to Park Central Road on the north side of the road. This road is typically closed from December to March. There are many smaller areas within the park itself. Those access at the higher elevations and off of the main road can be accessed by foot in the winter and there are many other climbing options that can be accessed directly from route 77.'
+  )
 
-highballs = SubArea.create(name: 'Roadside Highballs', description: 'AKA Crows Nest')
-dixie = SubArea.create(name: 'Dixie', description: 'Home of the Bullfrog Boulder')
+highballs = SubArea.create(
+  name: 'Roadside Highballs / Crows Nest',
+  description: 'The Roadside Highballs consist of a handfull of outcroppings on the very southern edge of Catoctin. The rock here is mostly greenstone at the lower level with a mix of greenstone and quartzite at higher elevations. Despite the name, the highballs are also surrounded by a number of shorter problems. There are some hidden gems around here that are found deeper in the woods but need a bit of scrubbing.',
+  location: 'The main attraction, Walk Into The Sky V7, is found on the north side of route 77 and west of the Crows Nest campground. The overhanging wall is clearly visible from the road. You can access this area by parking at the campground and following a trail west or parking in a roadside pull-off along 77 and crossing the shallow creek to intercept the trail.',
+  main_area_id: catoctin.id
+  )
 
-catoctin.sub_areas << highballs
-catoctin.sub_areas << dixie
-
-catoctin.save
-
-wits = Bproblem.create(name: 'Walk Into The Sky', grade: 'V7')
-highballs.bproblems << wits
-highballs.save
+neonpitstain = Bproblem.create(
+  name: 'Neon Pit Stain',
+  grade: 'V5',
+  description: 'Sit start on a combination of small crimps well left of the right facing arete. Move up through side pulls to good horizontal slots and finish up and out right on sharp jugs. ',
+  location: 'West of Walk Into The Sky in a tall west-facing formation. The formation is clearly visible from the trail.',
+  sub_area_id: highballs.id
+)
