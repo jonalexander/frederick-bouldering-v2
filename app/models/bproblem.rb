@@ -2,7 +2,7 @@ class Bproblem < ApplicationRecord
   validates_presence_of         :name,
                                 :grade,
                                 :description,
-                                :location
+                                :location,
                                 :sub_area_id
 
   validates                     :uniqueness => true

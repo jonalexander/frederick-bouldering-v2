@@ -31,9 +31,9 @@ neonpitstain = Bproblem.create(
 )
 
 walkintothesky = Bproblem.create(
-name: 'Walk Into The Sky',
-grade: 'V7',
-description: 'Classic highball on quality rock. Stand start in the center of the looming face before moving up and left to set up for a huge throw to a large flat ledge. Finish straight up. Safe landing with a couple pads.',
-location: 'Right off the trail coming from Crows Nest campground and running west along the creek on the north side of route 77. Visisble from the trail and road.',
-sub_area_id: highballs.id
+  name: 'Walk Into The Sky',
+  grade: 'V7',
+  description: 'Classic highball on quality rock. Stand start in the center of the looming face before moving up and left to set up for a huge throw to a large flat ledge. Finish straight up. Safe landing with a couple pads.',
+  location: 'Right off the trail coming from Crows Nest campground and running west along the creek on the north side of route 77. Visisble from the trail and road.',
+  sub_area_id: highballs.id
 )
