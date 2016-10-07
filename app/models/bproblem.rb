@@ -1,5 +1,11 @@
 class Bproblem < ApplicationRecord
-  validates_presence_of         :name, :grade, :sub_area_id
+  validates_presence_of         :name,
+                                :grade,
+                                :description,
+                                :location
+                                :sub_area_id
+
+  validates                     :uniqueness => true
 
   mount_uploaders               :photos, PhotoUploader
   serialize                     :photos, Array
