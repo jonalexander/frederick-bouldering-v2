@@ -3,6 +3,9 @@
 ## Frederick Bouldering
 Open-source project documenting the bouldering (rock climbing) development in Frederick, Maryland.
 
+## Behind The Scenes
+I build this web application with Rails 5, HTML and CSS. I'm currently working on refactoring the styling and throwing in a few more changes to the UI. I want to change the focus of the application to emphasize media for each boulder problem.
+
 ## Contribution Guidelines
 * Please post unobstructed photos of either the problem in full view or the problem being climbed.
 * Add SubAreas within the correct MainAreas. Double check to ensure that the SubArea is not being duplicated.
